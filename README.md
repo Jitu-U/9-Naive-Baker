@@ -2,4 +2,4 @@
 
 ### Your destination to find recipies
 
-### This is a sample commit
+### This is a sample commit to be rejected
