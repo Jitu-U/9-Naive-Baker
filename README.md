@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# 9-Naive-Baker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## IT314 - Group 9
 
-## Available Scripts
+#### Mentor: Prof. Saurabh Tiwari
 
-In the project directory, you can run:
+#### Project: Naive-Baker
 
-### `npm start`
+This repo contains Naive-Baker frontend code and Assignments. There are total of 2 repositories.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-   Frontend Repository (This repo): [https://github.com/Jitu-U/9-Naive-Baker/](https://github.com/Jitu-U/9-Naive-Baker)
+-   Backend Repository: [https://github.com/DeepGajera91/9-Naive-Baker-Backend/](https://github.com/DeepGajera91/9-Naive-Baker-Backend)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Development
+- First Fork this repository and then Clone the Forked repository.
+```bash
+git clone <your-url>
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Add your local repository as origin
+```bash
+git remote add origin <your-url>
+```
 
-### `npm run build`
+- Add this repository as upstream
+```bash
+git remote add upstream https://github.com/Jitu-U/9-Naive-Baker.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- To sync your local repository with central repository
+```bash
+git pull upstream main
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- You need Node & Yarn to start the development environment. Download them here - [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Run the development server using:
 
-### `npm run eject`
+```bash
+npm install
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- For production build:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm build
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Contribution
+-Create new branch and name it on the issue/feature you are working.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- to create new branch
+```bash
+git checkout -b <branch-name>
+```
+- to shift from one branch to another
+```bash
+git cheackout <branch-name>
+```
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- After completing create PR on that branch
+```bash
+git push origin <branch-name>
+```
+- Then from your local repo you can create pull request to upsream(central repository) 
