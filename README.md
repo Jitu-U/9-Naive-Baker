@@ -30,7 +30,7 @@ git remote add upstream https://github.com/Jitu-U/9-Naive-Baker.git
 
 - To sync your local repository with central repository
 ```bash
-git pull upstream main
+git pull upstream devmain
 ```
 
 - You need Node & Yarn to start the development environment. Download them here - [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com).
