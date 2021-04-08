@@ -38,6 +38,12 @@
 .base-container .content .form .form-group label {
 	font-size: 20px;
 }
+.input .checkbox_label {
+	display: inline;
+	text-align: left;
+	font-size: 16px;
+}
+
 
 .base-container .content .form .form-group input {
 	/* margin-top: 6px; */
