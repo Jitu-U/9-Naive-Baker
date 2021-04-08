@@ -33,8 +33,16 @@ class Register extends React.Component {
               <label htmlFor="password">Password</label>
               <input type="text" name="password" placeholder="password" />
             </div>
+              {/* <label htmlFor="foodChoice1" class="checkbox_label">   
+              <input type="checkbox" name="foodChoice1" class="checkbox_label" value="Vegan" /> Are you a Vegan ?
+              </label>
+              <label htmlFor="foodChoice2"class="checkbox_label">
+              <input type="checkbox" name="foodChoice2" class="checkbox_label" value="Vegetarian" />
+               Or a Vegetarian ?
+              </label> */}
           </div>
         </div>
+        <br></br>
         <div className="footer">
           <button type="button" className="btn">
             Register
