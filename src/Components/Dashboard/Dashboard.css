@@ -1,0 +1,80 @@
+.profile{
+    margin: 2px;
+    padding: 5px;
+    height: 98vh;
+    border-bottom-left-radius:50px ;
+    border-top-right-radius:50px ;
+    /* background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS3M5p-bx8Sz4ee-h4NNmbyxqM8LYetcCf7A&usqp=CAU') no-repeat center center/cover; */
+  
+  }
+  .bio{
+    width: 100%;
+    height: 25%; 
+    padding-bottom: 18px;
+    display: flex;
+    flex-direction: row;  
+    border-top-right-radius:50px ;
+    border-bottom: 3px solid black;
+    /* background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS3M5p-bx8Sz4ee-h4NNmbyxqM8LYetcCf7A&usqp=CAU') no-repeat center center/cover; */
+  }
+  .photobox{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 17%;
+  }
+  .photo{
+    scale: 4;
+  }
+  .bionibaju{
+    margin-left: 55px;
+    font-weight: bold;
+  }
+  .bionibaju > h1{
+    scale: 1.15;
+    padding-left: 25px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+  }
+  .dummy{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: rgb(46, 32, 19);
+  }
+  .bioicon{
+    margin:0% 5% 20px 0%;
+    width: 200px;
+  }
+  .biobottom{
+    /* background-color: #bdbdbd; */
+    padding-top: 5px;
+    font-weight: bolder;
+  
+    /* background-color: rgb(162, 162, 162); */
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .data{
+    margin: 20px 0px 20px 15px;
+  }
+  
+  a {
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  .profilebutton{
+    /* font-weight: bold; */
+    width: 17%;
+    background-color: rgb(255, 172, 17);
+    color: beige;
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 35px;
+    border: 2px solid black;
+  }
