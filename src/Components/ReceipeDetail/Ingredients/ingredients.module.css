@@ -1,0 +1,73 @@
+.Background{
+    background-color: aquamarine;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 5px;
+}
+
+.Heading{
+    font-size: 23px;
+    font-weight: 500;
+    margin-left: 1%;
+    margin-top: 0px;
+}
+
+.Display{
+    margin-top: 0px;
+    margin-left: 1%;
+    padding-bottom: 1%;
+}
+
+.Left{
+    margin-top: 5px;
+    width: 32%;
+}
+
+.Middle{
+    margin-top: 5px;
+    width: 32%;
+}
+
+.Right{
+    margin-top: 5px;
+    width: 32%;
+}
+
+.Flex{
+    display: flex;
+}
+
+.SubHeading{
+    font-size: 22px;
+    font-weight: 450;
+    margin-left: 1%;
+    margin-top: 0px;
+}
+
+.LeftPush{
+    margin-left: 10%;
+}
+
+
+.RightPush{
+    margin-left: 40%;
+}
+
+.LeftPushh{
+    margin-left: 15%;
+}
+
+.MiddlePushh{
+    margin-left: 20%;
+}
+
+.RightPushh{
+    margin-left: 50%;
+}
+
+.IngredientsText{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 0px;
+}
