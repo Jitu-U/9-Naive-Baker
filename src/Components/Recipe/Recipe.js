@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './card/card';
 
-const receipe = (props) => {
+const Recipe = (props) => {
     let tags = [["Non-vegetarian","Breakfast"],["Mexican","Lunch"],["India"]];
     return (
         <Card title='Pizza' tags={tags}>
@@ -9,4 +9,4 @@ const receipe = (props) => {
     );
 }
 
-export default receipe;
+export default Recipe;
