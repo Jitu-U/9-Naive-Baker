@@ -1,0 +1,52 @@
+.Left{
+    margin-top: 5px;
+    width: 40%;
+}
+
+.Middle{
+    width: 20%;
+}
+
+.Right{
+    margin-top: 5px;
+    width: 40%;
+}
+
+.Background{
+    background-color: aquamarine;
+    display: flex;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 5px;
+}
+
+.Display{
+    font-size: 28px;
+    color: brown;
+    font-weight: 700;
+    margin-left: 4%;
+}
+
+.Button{
+    border-radius: 5px;
+    background-color: gray;
+    color: white;
+    width: 70%;
+    height: 20%;
+    margin-top: 5%;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.Button:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 4px 4px lightseagreen;
+    color: greenyellow;
+}
+
+.TimeCook{
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 5%;
+}
