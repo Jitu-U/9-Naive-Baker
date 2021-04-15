@@ -1,6 +1,6 @@
 //Recipe-Page for recipes - by Raj & Kunj
 import React, { Component } from 'react'
-import RecipeDetail from "../Components/Recipe-Format/recipeDetail"
+import RecipeDetail from "../Components/RecipeDetail/RecipeDetail"
 
  class RecipePage extends Component {
   render() {

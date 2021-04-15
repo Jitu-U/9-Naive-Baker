@@ -1,7 +1,7 @@
 // Home page  default and explore page -  by - Jitesh & Meet
 import { BrowserRouter, Route, Switch, Redirect, Link, useHistory } from 'react-router-dom'
 import Navbar from "../Components/Navbar/Navbar"
-import Recipe from "../Components/Recipe/Recipe"
+import Recipe from "../Components/RecipeCard/RecipeCard"
 import "./Home.css"
 
 
