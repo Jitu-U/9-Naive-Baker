@@ -50,6 +50,7 @@ function Navbar(){
 
           <div className="Nav-Right">
           <SearchBox/>
+          
           <Notifications/>
           {ProfileMenu()}
         </div>

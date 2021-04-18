@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import Card from './card/card';
 
@@ -11,4 +12,5 @@ const RecipeCard = (props) => {
 }
 
 export default RecipeCard;
+
 

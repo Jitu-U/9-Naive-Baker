@@ -1,4 +1,4 @@
-// Home page  default and explore page -  by - Jitesh & Meet
+// Home page  default and explore page -  by - Jitesh
 import { BrowserRouter, Route, Switch, Redirect, Link, useHistory } from 'react-router-dom'
 import Navbar from "../Components/Navbar/Navbar"
 import Recipe from "../Components/RecipeCard/RecipeCard"
@@ -19,7 +19,7 @@ function Home() {
         <Navbar className="navbar"/>
       </div>
       <div className="Home-Body-container">
-        <div className="Grid-Row">
+       <div className="Grid-Row">
           <Recipe title="Nil" src="Nil"  onClick={recipe}/>
           <Recipe/>
           <Recipe/>
