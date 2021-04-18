@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import "./Search-Box.css";
 import { IoIosSearch } from "react-icons/io";
+import { IoFilterSharp } from "react-icons/io5"
 
 
 
@@ -19,7 +20,7 @@ const handleClick = () => setClick(!click);
 
                 </div>
                 <div className="search-button" >
-
+                    <IoFilterSharp className="search-icon" size={21}/>
                 </div>
 
         </div>

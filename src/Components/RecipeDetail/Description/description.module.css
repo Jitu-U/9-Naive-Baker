@@ -1,5 +1,5 @@
 .Background{
-    background-color: aquamarine;
+    background-color: none;
     margin-top: 1%;
     margin-left: 10%;
     margin-right: 10%;
@@ -15,6 +15,7 @@
 
 .Display{
     margin-top: 0px;
-    margin-left: 1%;
+    margin-left: 1vw;
     padding-bottom: 1%;
+    text-align: justify;
 }

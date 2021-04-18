@@ -1,6 +1,6 @@
-<<<<<<< Updated upstream
+
 //Recipe card .js
-=======
+
 
 
 import React from 'react';
@@ -10,12 +10,11 @@ const RecipeCard = (props) => {
     let tags = [["cheese","Breakfast"],["Mexican","Lunch"],["India"]];
     let category = "veg";
     return (
-        <Card title='Pizza' tags={tags} category={category}>
-        </Card>
+        <Card title='Pizza' tags={tags} category={category}/>
     );
 }
 
 export default RecipeCard;
 
 
->>>>>>> Stashed changes
+
