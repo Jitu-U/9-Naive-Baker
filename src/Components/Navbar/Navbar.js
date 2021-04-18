@@ -47,14 +47,14 @@ function Navbar(){
         Naive Baker
       </Link>
 
-
+        <div className="Nav-Right-parent">
           <div className="Nav-Right">
           <SearchBox/>
           
           <Notifications/>
           {ProfileMenu()}
         </div>
-
+        </div>
     </div>
   </nav>
   </>
