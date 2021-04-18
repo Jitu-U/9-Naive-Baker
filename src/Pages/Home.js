@@ -34,11 +34,6 @@ function Home() {
           <Recipe/>
           <Recipe/>
         </div>
-        <div className="Grid-Row">
-          <Recipe title="Nil" src="Nil" />
-          <Recipe/>
-          <Recipe/>
-        </div>
       </div>
       </div>
       </>
