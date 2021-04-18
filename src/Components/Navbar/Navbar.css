@@ -8,13 +8,13 @@
   margin-right: 5vw;
   align-items: center;
   font-size: 1.2rem;
-  position: fixed;
-  top: 20;
+  /* position: fixed; */
+  /* top: 20; */
   z-index: 999;
 }
 
 .navbar-container {
-  position: fixed;
+  /* position: fixed; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +25,7 @@
 .navbar-logo {
   justify-self: start;
   font-family: Noteworthy;
-    margin-left: 0px;
+    margin-top: 30px;
     cursor: pointer;
     text-decoration: none;
     font-size: 2.5rem;
@@ -36,17 +36,21 @@
 
 }
 
+.Nav-Right-parent{
+    position: relative;
+}
+
 .Nav-Right{
-  position: fixed;
+  position: absolute;
+  left: 15rem;
   display: inline-flex;
-  right: 5vw;
   justify-content: flex-end;
 }
 
 .notif{
   padding: 20px;
   display: block;
-  margin-right: 60px;
+  margin-right: 100px;
 }
 
 .join-btn {
@@ -89,7 +93,7 @@ SearchBox{
   width: 190px;
   display: inline-flex;
   justify-content: flex-start;
-  padding: 5px 5px;
+  padding: 0px 25px;
   font-size: 13px;
 }
 
@@ -104,11 +108,11 @@ SearchBox{
 }
 
 .Name {
-  padding-top: 5px;
+  padding-top: 10px;
   margin-right: 10px;
   font-family: "SF Pro";
-  font-weight: 500;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 16px;
   text-align: left;
   color: #000;
 
