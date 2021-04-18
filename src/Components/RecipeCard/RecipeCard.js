@@ -1,13 +1,16 @@
 
+//Recipe card .js
+
+
 
 import React from 'react';
 import Card from './card/card';
 
 const RecipeCard = (props) => {
-    let tags = [["Non-vegetarian","Breakfast"],["Mexican","Lunch"],["India"]];
+    let tags = [["cheese","Breakfast"],["Mexican","Lunch"],["India"]];
+    let category = "veg";
     return (
-        <Card title='Pizza' tags={tags}>
-        </Card>
+        <Card title='Pizza' tags={tags} category={category}/>
     );
 }
 
