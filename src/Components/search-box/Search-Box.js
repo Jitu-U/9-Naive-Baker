@@ -20,11 +20,7 @@ const handleClick = () => setClick(!click);
 
                 </div>
                 <div className="search-button" >
-<<<<<<< HEAD
-                    <IoFilterSharp className="icon" size={21}/>
-=======
                     <IoFilterSharp className="search-icon" size={21}/>
->>>>>>> devmain
                 </div>
 
         </div>

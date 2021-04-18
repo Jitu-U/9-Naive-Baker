@@ -1,10 +1,7 @@
 
-<<<<<<< HEAD
-=======
 //Recipe card .js
 
 
->>>>>>> devmain
 
 import React from 'react';
 import Card from './card/card';
@@ -20,7 +17,3 @@ const RecipeCard = (props) => {
 export default RecipeCard;
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> devmain
