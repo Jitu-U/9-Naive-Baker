@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 // Home page  default and explore page -  by - Jitesh & Meet
+=======
+// Home page  default and explore page 
+>>>>>>> Stashed changes
 import { BrowserRouter, Route, Switch, Redirect, Link, useHistory } from 'react-router-dom'
 import Navbar from "../Components/Navbar/Navbar"
 import Recipe from "../Components/Recipe/Recipe"
