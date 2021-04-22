@@ -10,7 +10,7 @@ const RecipeCard = (props) => {
     let tags = [["cheese","Breakfast"],["Mexican","Lunch"],["India"]];
     let category = "veg";
     return (
-        <Card title='Pizza' tags={tags} category={category}/>
+        <Card title='Margherita Pizza with Cheese Burst' tags={tags} category={category}/>
     );
 }
 
