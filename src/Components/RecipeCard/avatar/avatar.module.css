@@ -1,20 +1,22 @@
 .Image{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 90px;
+    margin: 5px 0 5px 10px;
 }
 
 .Avatar{
     background-color: white;
-    border-radius: 23px;
+    border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0,0, 0.16);
     display: inline-flex;
     justify-content: safe;
     width: 10vmax;
     text-align: center;
-    margin-left: 5px;
+    margin: 10px;
 }
 
 .M1 {
     display: inline-block;
+    padding: 10px 0px 10px 10px;
 }
