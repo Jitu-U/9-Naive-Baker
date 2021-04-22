@@ -1,8 +1,20 @@
 .Image{
     width: 40px;
     height: 40px;
-<<<<<<< HEAD
-    border-radius: 13px;
-=======
->>>>>>> e84e5f3b1cf50b041182fe063cc9a999138d05e9
+    border-radius: 90px;
+}
+
+.Avatar{
+    background-color: white;
+    border-radius: 23px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0,0, 0.16);
+    display: inline-flex;
+    justify-content: safe;
+    width: 10vmax;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.M1 {
+    display: inline-block;
 }

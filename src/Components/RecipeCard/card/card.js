@@ -1,6 +1,9 @@
 import React from 'react';
 import Avatar from '../avatar/avatar';
 import Classes from './card.module.css';
+import {FcLikePlaceholder,FcLike} from 'react-icons/fc'
+import {MdPlaylistAdd,MdPlaylistAddCheck,MdShare} from 'react-icons/md'
+import avatar from '../avatar/avatar';
 
 
 
@@ -17,22 +20,16 @@ const card = (props) => {
     for(let i=0;i<props.tags.length;i++){
         if(i+1 === props.tags.length){
             displayTag.push(
-               
-                    <div className={Classes.LeftTag}>
                         <p className={Classes.Tag}>{props.tags[i][0]}</p>
-                    </div>
+                    
                 
             );
         }
         else{
             displayTag.push(
                     <>
-                    <div className={Classes.LeftTag}>
                         <p className={Classes.Tag}>{props.tags[i][0]}</p>
-                    </div>
-                    <div className={Classes.RightTag}>
                         <p className={Classes.Tag}>{props.tags[i][1]}</p>
-                    </div>
                     </>
             );
         }
@@ -43,9 +40,9 @@ const card = (props) => {
             <div style={{display: "inline-block",width: "100%"}}>
                
                 <div className={Classes.Title}>
-                        <p>{props.title}</p>
+                        
                     <div>
-                <       svg id="Veg-Nonveg-Logo" className={Classes.VegNonLogo} width="21" height="21" viewBox="0 0 21 21">
+                        < svg id="Veg-Nonveg-Logo" className={Classes.VegNonLogo} width="21" height="21" viewBox="0 0 21 21">
                             <g id="Rectangle_3" data-name="Rectangle 3" fill="none" stroke={vegi} stroke-width="2.1">
                                 <rect width="21" height="21" rx="3" stroke="none"/>
                                 <rect x="1.05" y="1.05" width="18.9" height="18.9" rx="1.95" fill="none"/>
@@ -56,25 +53,32 @@ const card = (props) => {
                             </g>
                         </svg>
                     </div>
+                    <p>{props.title}</p>
                 </div>
             </div>
+            <div  className={Classes.info}>
             <div className={Classes.pict}>
                 <img src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1126,w_2000,x_0,y_181/f_auto,q_auto,w_1100/v1554932288/shape/mentalfloss/12531-istock-637790866.jpg"></img>
-            </div>
-
-            <div style={{display: "flex"}}>
+                <div lassName={Classes.infoBox}><div style={{display: "inline-block"}}>
+                    <Avatar/>
             {displayTag}
             </div>
-            <div>
-                <div className={Classes.LeftLike}>
-                    <p className={Classes.Box}>Like</p>
+            <div className={Classes.actions}>
+                <div className={Classes.Button}>
+                    <FcLikePlaceholder size={30}/>
                 </div>
-                <div className={Classes.MiddleLike}>
-                    <p className={Classes.Box}>Comment</p>
+                <div className={Classes.Button}>
+                    <MdPlaylistAdd size={30}/> 
                 </div>
-                <div className={Classes.RightLike}>
-                    <p className={Classes.Box}>Share</p>
+                <div className={Classes.Button}>
+                    <MdShare size={30}/> 
                 </div>
+            </div>
+            </div>
+            </div>
+
+            
+            
             </div>
         </div>
     );
