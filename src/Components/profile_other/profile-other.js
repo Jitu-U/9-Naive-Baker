@@ -1,12 +1,8 @@
-import { render } from "react-dom";
 import './profile-other.css';
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
-import ToggleButton from 'react-bootstrap/ToggleButton';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import $ from 'jquery';
-import './temp';
+
+
 
 function ProfileOther() {
   return (
