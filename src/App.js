@@ -6,6 +6,7 @@ import Home from "./Pages/Home"
 import RecipePage from "./Pages/Recipe-page"
 import Dashboard from "./Pages/Dashboard"
 import PublicProfile from './Pages/PublicProfile';
+import UploadRecipe from './Pages/UploadRecipe';
 //import Navbar from "./Components/Navbar";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/Dashboard" component={Dashboard} />
                 <Route path="/RecipePage" component={RecipePage} />
                 <Route path="/PublicProfile" component={PublicProfile}/>
+                <Route path="/Upload" component={UploadRecipe}/>
             </Switch>
         </BrowserRouter>
   );
