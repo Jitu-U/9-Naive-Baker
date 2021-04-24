@@ -1,8 +1,8 @@
-import "./Profile.css";
-import { useState } from "react";
+import "./Dashboard.css";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
-import SettingsIcon from "@material-ui/icons/Settings";
+import { RiEdit2Line } from "react-icons/ri";
+
 function Profile(props) {
   return (
     <div className="profile">
@@ -25,7 +25,7 @@ function Profile(props) {
             </div>
           </div>
           <Button variant="outlined" style={{ "margin-left": "95px" }}>
-            <SettingsIcon style={{ "margin-right": "8px" }} /> Edit Profile
+            <RiEdit2Line style={{ "margin-right": "8px" }} /> Edit Profile
           </Button>
         </div>
         <div>

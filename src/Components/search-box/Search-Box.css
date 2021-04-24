@@ -1,1 +1,118 @@
 /*search box -by JItesh & Meet*/
+
+
+.Outer-container {
+
+    display: inline-flex;
+    justify-content: center;
+}
+
+.search-bar {
+  justify-content: center;
+  min-width: 20em;
+  max-width: 40em;
+	height: 37px;
+	font-size: 16px;
+	background-color: #ffffff;
+	border: 0;
+	border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+	margin-bottom: 10px;
+  margin-left: 10vw;
+	transition: all 250ms ease-in-out;
+  padding-left: 5px;
+  padding-right: 2px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.16);
+  border-width: thick;
+  display: inline-flex;
+  border: 0.2px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.s-input {
+  border: none;
+  border-radius: 21px;
+  outline: none;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.s-input:focus{
+  border-color:#4d90fe;
+}
+
+.Filter-btn{
+  display: inline;
+  padding: 8px 13px;
+}
+
+.search-bar:hover{
+  box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.20);
+}
+
+.Filters{
+  justify-content: block;
+  width: 48px;
+  height: 37px;
+  margin-right: 1rem;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  background:rgba(0, 0, 29, 0.16);
+  box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.16);
+}
+
+.search-advanced-hidden{
+  display: none;
+  width: 383px;
+height: 99px;
+border-radius: 0px 0px 10px 10px;
+background: #fff;
+opacity: 0.44;
+box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+border-bottom-right-radius: 13px;
+border-bottom-left-radius: 13px;
+}
+
+.search-advanced{
+  display: block;
+  width: 383px;
+height: 99px;
+border-radius: 0px 0px 10px 10px;
+background: #fff;
+opacity: 0.44;
+box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+border-bottom-right-radius: 13px;
+border-bottom-left-radius: 13px;
+animation: 3s;
+}
+
+.icon{
+  margin-top: 6px;
+  margin-left: 2px;
+}
+
+.Filter-Menu{
+  background-color: white;
+  z-index: 999;
+  box-shadow: inherit;
+  border-radius: 13px;
+  margin-top: 10px;
+  height: 300px;
+  width: 200px;
+  display: block;
+}
+.Menu-item{
+    margin-left: 10px;
+    display: inline;
+}
+
+.F-input{
+  text-decoration: none;
+  outline: none;
+  width: 150px;
+  border-color: #ffffff;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.16);
+  text-size-adjust: auto;
+}
