@@ -4,11 +4,13 @@ import RecipeDetail from "../Components/RecipeDetail/RecipeDetail"
 import "./Recipe-page.css"
 import {FcLikePlaceholder,FcLike} from 'react-icons/fc'
 import {MdPlaylistAdd,MdPlaylistAddCheck,MdShare} from 'react-icons/md'
+import Navbar from "../Components/Navbar/Navbar"
 
  class RecipePage extends Component {
   render() {
     return (
         <>
+          <Navbar/>
           <div className="container">
           <RecipeDetail/>
             <div className="Actions">
