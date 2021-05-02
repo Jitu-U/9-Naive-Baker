@@ -5,29 +5,27 @@ import { RiEdit2Line } from "react-icons/ri";
 
 function Profile(props) {
   return (
+    <div class="main_card">
     <div className="profile">
       <div className="bio">
-        <div className="photobox">
-          <Avatar
-            className="photo"
-            alt="Remy Sharp"
-            src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          />
-        </div>
         <div className="bionibaju">
-          <h1>User1</h1>
-          <div className="dummy">
-          <div className="bioicon">
+        <div className="photobox">
+          <img src="https://seventhqueen.com/themes/kleo/wp-content/uploads/rtMedia/users/44269/2020/07/dummy-profile.png"></img>
+         </div>
+          <h1>Username</h1>
+          <span className="bioicon">
               <a href="#"><Button variant="contained" color='primary'>113 followers</Button></a>
-            </div>
-            <div className="bioicon">
+            </span>
+            <span className="bioicon">
               <a href="#"><Button variant="contained" color='primary'>123 following</Button></a>
-            </div>
+            </span>
+            {/* <span className="bioicon">
+              <a href="#"><Button variant="contained" color='primary'>Edit profile</Button></a>
+            </span> */}
           </div>
-          <Button variant="outlined" style={{ "margin-left": "95px" }}>
+          {/* <Button variant="outlined" style={{ "margin": "20px 175px" }}>
             <RiEdit2Line style={{ "margin-right": "8px" }} /> Edit Profile
-          </Button>
-        </div>
+          </Button> */}
         <div>
           {/* ahi lakhjo */}
          </div>
@@ -55,6 +53,7 @@ function Profile(props) {
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 }
