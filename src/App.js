@@ -13,15 +13,15 @@ function App() {
   return (
     <BrowserRouter>
 
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/LoginSignup" component={LoginSignup} />
-                <Route path="/Dashboard" component={Dashboard} />
-                <Route path="/RecipePage" component={RecipePage} />
-                <Route path="/PublicProfile" component={PublicProfile}/>
-                <Route path="/Upload" component={UploadRecipe}/>
-            </Switch>
-        </BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/LoginSignup" component={LoginSignup} />
+        <Route path="/Dashboard" component={Dashboard} />
+        <Route path="/RecipePage" component={RecipePage} />
+        <Route path="/PublicProfile" component={PublicProfile} />
+        <Route path="/Upload" component={UploadRecipe} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
