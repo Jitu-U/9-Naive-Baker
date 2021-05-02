@@ -54,20 +54,31 @@ body {
 }
 
 .bio-container {
-    padding-top: 89px;
-    margin: 0 auto;
-    width: 70%;
+    /* padding-top: 89px; */
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: rgb(174,235,238);
+    background: radial-gradient(circle, rgba(174,235,238,1) 0%, rgba(160,233,148,1) 100%);
+    box-shadow: 2px 2px 0.5rem rgba(0, 0, 0, 0.281);
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    width: 50%;
+    padding: 2rem;
+}
+.profile_pic{
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.content{
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 .bio-container img {
     display: inline-block;
-    margin: 35px 20px 20px;
-    width: 120px;
-}
-
-.bio-container div {
-    height: 85px;
-    margin: 35px 15px 20px;
+    /* margin: 35px 20px 20px; */
+    /* width: 120px; */
 }
 
 .bio-container div span {
@@ -78,6 +89,12 @@ body {
 
 .username {
     font-weight: 600;
+    text-align: center;
+}
+
+.display-name {
+    /* font-weight: 600; */
+    text-align: center;
 }
 
 .edit-profile {
@@ -90,7 +107,8 @@ body {
 
 .bio {
     height: 75px !important;
-    margin-top: 3px !important;
+    /* margin-top: 3px !important; */
+    text-align: center;
 }
 
 .bio p {
@@ -104,9 +122,12 @@ body {
 .account-stats {
     border-top: 1px solid #ececec;
     border-bottom: 1px solid #ececec;
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 10px 0;
     width: 70%;
+    background: rgb(174,235,238);
+    background: radial-gradient(circle,  rgba(160,233,148,1) 0% ,rgba(174,235,238,1) 100%,);
+    border-radius: 10px;
 }
 
 .account-stats div {
@@ -139,14 +160,15 @@ body {
 .posts-type-row div {
     display: inline-block;
     text-align: center;
-    width: 32%;
+    /* width: 32%;
+     */
+     margin-left: 50%;
+     transform: translateX(-50%);
 }
 
 .my-posts {
-    display: block;
-    height: 24px;
-    margin: 0 auto;
-    width: 24px;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 .bookmarked-posts {
@@ -184,11 +206,18 @@ body {
 button {
     background: blue;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 10px;
     color: whitesmoke;
     width: 120px;
+    font-size: 1rem;
     border-radius: 5px;
     transition: all .3s ease-in;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.0);
+    box-shadow: 2px 2px 2rem rgb(174,235,238);
 }
 
 button:active {
