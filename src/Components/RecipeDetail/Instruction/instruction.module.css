@@ -1,0 +1,22 @@
+.Background{
+    background-color: white;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 5px;
+    width: 60vw;
+    padding-bottom: 10vw;
+}
+
+.Heading{
+    font-size: 23px;
+    font-weight: 500;
+    margin-left: 1%;
+    margin-top: 0px;
+}
+
+.Display{
+    margin-top: 0px;
+    margin-left: 1%;
+    padding-bottom: 1%;
+}

@@ -1,13 +1,36 @@
 //Login Component for Login Page  by Dhyey & Mitesh
-import React from "react";
+import React, { useState } from "react";
+import Axios from "axios";
 import "./Login.css";
 import loginImg from "./login.jpg";
+import { Redirect } from "react-router-dom";
 
 class Login extends React.Component {
     constructor(props) {
       super(props);
+      this.state = {
+        email: "",
+        password:"",
+        url : "https://naivebakerr.herokuapp.com/user/login"
+      }
     }
-
+    handle = (event) => {
+      let id = event.target.name;
+      let val = event.target.value;
+      console.log(id + " " + val);
+      this.setState({[id]:val});
+    }
+    mysubmit = (event) => {
+      Axios.post(this.state.url,{
+        email : this.state.email,
+        password : this.state.password
+      })
+      .then(res=>{
+          console.log(res.data)
+          window.location = "http://localhost:3000/"
+      })
+      .catch(res => { alert(res) })
+    }
     render() {
       return (
         <div className="base-container" ref={this.props.containerRef}>
@@ -18,17 +41,17 @@ class Login extends React.Component {
             </div>
             <div className="form">
               <div className="form-group">
-                <label htmlFor="username">Username</label>
-                <input type="text" name="username" placeholder="username" />
+                <label htmlFor="email">email</label>
+                <input type="text" name="email" onChange={this.handle} placeholder="email" />
               </div>
               <div className="form-group">
                 <label htmlFor="password">Password</label>
-                <input type="password" name="password" placeholder="password" />
+                <input type="password" name="password" onChange={this.handle} placeholder="password" />
               </div>
             </div>
           </div>
           <div className="footer">
-            <button type="button" className="btn">
+            <button type="button" className="btn" onClick={(e)=>this.mysubmit(e)}>
               Login
             </button>
           </div>
