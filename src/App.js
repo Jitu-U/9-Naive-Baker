@@ -7,21 +7,23 @@ import RecipePage from "./Pages/Recipe-page"
 import Dashboard from "./Pages/Dashboard"
 import PublicProfile from './Pages/PublicProfile';
 import UploadRecipe from './Pages/UploadRecipe';
+import ForgetPassword from './Pages/ForgetPassword';
 //import Navbar from "./Components/Navbar";
 
 function App() {
   return (
     <BrowserRouter>
 
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/LoginSignup" component={LoginSignup} />
-        <Route path="/Dashboard" component={Dashboard} />
-        <Route path="/RecipePage" component={RecipePage} />
-        <Route path="/PublicProfile" component={PublicProfile} />
-        <Route path="/Upload" component={UploadRecipe} />
-      </Switch>
-    </BrowserRouter>
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/LoginSignup" component={LoginSignup} />
+                <Route path="/Dashboard" component={Dashboard} />
+                <Route path="/RecipePage" component={RecipePage} />
+                <Route path="/PublicProfile" component={PublicProfile}/>
+                <Route path="/Upload" component={UploadRecipe}/>
+                <Route path="/ResetPassword" component={ForgetPassword}/>
+            </Switch>
+        </BrowserRouter>
   );
 }
 
