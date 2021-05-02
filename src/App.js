@@ -7,6 +7,7 @@ import RecipePage from "./Pages/Recipe-page"
 import Dashboard from "./Pages/Dashboard"
 import PublicProfile from './Pages/PublicProfile';
 import UploadRecipe from './Pages/UploadRecipe';
+import ForgetPassword from './Pages/ForgetPassword';
 //import Navbar from "./Components/Navbar";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/RecipePage" component={RecipePage} />
                 <Route path="/PublicProfile" component={PublicProfile}/>
                 <Route path="/Upload" component={UploadRecipe}/>
+                <Route path="/ResetPassword" component={ForgetPassword}/>
             </Switch>
         </BrowserRouter>
   );
