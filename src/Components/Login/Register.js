@@ -28,11 +28,18 @@ class Register extends React.Component {
       password : this.state.password
     })
     .then(res=>{
-      console.log(res.data)
-      alert("Successfully registered")
-      window.location = "http://localhost:3000/"
+      if(res.data.ok == "true")
+      {
+        console.log(res.data)
+        alert("Successfully registered")
+        window.location = "http://localhost:3000/"
+      }
+      else
+      {
+        alert(res.data.err.msg);
+      }
     })
-    .catch(res => { alert(res) })
+    .catch(res => {  })
   }
  
   render() {
