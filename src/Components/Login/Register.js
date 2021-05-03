@@ -28,11 +28,18 @@ class Register extends React.Component {
       password : this.state.password
     })
     .then(res=>{
-      console.log(res.data)
-      alert("Successfully registered")
-      window.location = "http://localhost:3000/"
+      if(res.data.ok == "true")
+      {
+        console.log(res.data)
+        alert("Successfully registered")
+        window.location = "http://localhost:3000/"
+      }
+      else
+      {
+        alert(res.data.err.msg);
+      }
     })
-    .catch(res => { alert(res) })
+    .catch(res => {  })
   }
  
   render() {
@@ -40,9 +47,9 @@ class Register extends React.Component {
       <div className="base-container" ref={this.props.containerRef}>
         <div className="header">Register</div>
         <div className="content">
-          <div className="image">
+          {/* <div className="image">
             <img src={loginImg} />
-          </div>
+          </div> */}
           <div className="form">
           <div className="form-group">
               <label htmlFor="name">Name</label>
