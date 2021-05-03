@@ -8,9 +8,9 @@ import {MdPlaylistAdd,MdPlaylistAddCheck} from 'react-icons/md'
 
 
 function Upper (props) {
-  const NLikes = 0;//Number of Likes
-  const VegStatus = true;
-  const vegi = "#03550f"; // Veg or Nonveg tag
+  let NLikes = 0;//Number of Likes
+  let VegStatus = true;
+  let vegi = "#03550f"; // Veg or Nonveg tag
   if(!VegStatus){
     vegi = "#930000";
   }
