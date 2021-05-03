@@ -45,7 +45,7 @@ function Upper (props) {
                 <div onClick= {handleClick}>{click ?  <FcLike size={30}/> : <FcLikePlaceholder size={30}/> } {NLikes}</div>
             </div>
             <div className={Classes.PhotoContainer}>
-                <img style={{width: "75%",height: "95%"}} src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1126,w_2000,x_0,y_181/f_auto,q_auto,w_1100/v1554932288/shape/mentalfloss/12531-istock-637790866.jpg"></img>
+                <img class="upper_img" style={{width: "75%",height: "95%"}} src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1126,w_2000,x_0,y_181/f_auto,q_auto,w_1100/v1554932288/shape/mentalfloss/12531-istock-637790866.jpg"></img>
             </div>
         </div>
     );
