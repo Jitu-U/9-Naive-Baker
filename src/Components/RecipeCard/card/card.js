@@ -42,7 +42,7 @@ const card = (props) => {
                 <div className={Classes.Title}>
                         
                     <div>
-                        < svg id="Veg-Nonveg-Logo" className={Classes.VegNonLogo} width="20" height="20" viewBox="0 0 21 21">
+                        <svg id="Veg-Nonveg-Logo" className={Classes.VegNonLogo} width="20" height="20" viewBox="0 0 21 21">
                             <g id="Rectangle_3" data-name="Rectangle 3" fill="none" stroke={vegi} stroke-width="2.1">
                                 <rect width="21" height="21" rx="3" stroke="none"/>
                                 <rect x="1.05" y="1.05" width="18.9" height="18.9" rx="1.95" fill="none"/>
