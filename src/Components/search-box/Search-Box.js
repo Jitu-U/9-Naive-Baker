@@ -19,17 +19,11 @@ const handleClick = () => setClick(!click);
 
                 </div>
                 <div className="Filters" >
-                    <IoFilterSharp className="filter-btn" size={21}/>
-                    <div className="Filter-Menu">
-                      <div className="Menu-item">  <Switch/> Veg Only</div>
-                      <div className="Menu-item"> <input className="F-input" type="text" placeholder="Enter ingredients"></input></div>
-                    </div>
+                    
                 </div>
 
         </div>
-        <div className={click ? 'search-advanced': 'search-advanced-hidden'} >
-            <div> </div>
-        </div>
+        
 
       </>
     )

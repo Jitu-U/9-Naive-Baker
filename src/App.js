@@ -23,6 +23,7 @@ function App() {
                 <Route path="/Upload" component={UploadRecipe}/>
                 <Route path="/ResetPassword" component={ForgetPassword}/>
                 <Route path="/SearchPage" component={SearchPage}/>
+                <Route path="/ForgetPassword" component={ForgetPassword}/>
             </Switch>
         </BrowserRouter>
   );
