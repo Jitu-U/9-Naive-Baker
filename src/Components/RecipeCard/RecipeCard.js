@@ -1,12 +1,8 @@
-
-//Recipe card .js
-
-
-
 import React from 'react';
 import Card from './card/card';
 
-const RecipeCard = (props) => {
+const RecipeCard = ({r}) => {
+    console.log(r);
     let tags = [["cheese","Breakfast"],["Mexican","Lunch"],["India"]];
     let category = "veg";
     return (

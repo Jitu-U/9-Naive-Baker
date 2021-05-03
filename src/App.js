@@ -8,7 +8,7 @@ import Dashboard from "./Pages/Dashboard"
 import PublicProfile from './Pages/PublicProfile';
 import UploadRecipe from './Pages/UploadRecipe';
 import ForgetPassword from './Pages/ForgetPassword';
-//import Navbar from "./Components/Navbar";
+import SearchPage from './Pages/SearchPage';
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
                 <Route path="/PublicProfile" component={PublicProfile}/>
                 <Route path="/Upload" component={UploadRecipe}/>
                 <Route path="/ResetPassword" component={ForgetPassword}/>
+                <Route path="/SearchPage" component={SearchPage}/>
             </Switch>
         </BrowserRouter>
   );
