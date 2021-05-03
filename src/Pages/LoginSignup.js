@@ -2,7 +2,7 @@ import React from "react";
 import "./LoginSignup.css";
 import Login from "../Components/Login/Login"
 import Register from "../Components/Login/Register"
-
+import loginImg from "../Components/Login/login.jpg";
 class LoginSignup extends React.Component {
   constructor(props) {
     super(props);
@@ -28,15 +28,18 @@ class LoginSignup extends React.Component {
     }
     this.setState(prevState => ({ isLogginActive: !prevState.isLogginActive }));
   }
-
+ 
   render() {
     const { isLogginActive } = this.state;
     const current = isLogginActive ? "Register" : "Login";
     const currentActive = isLogginActive ? "login" : "register";
     return (
       <div className="App">
+        <div>
+              <img src={loginImg} class="login_img"/>
+        </div>
         <div className="login">
-          <div className="container" ref={ref => (this.container = ref)}>
+          <div className="containerr" ref={ref => (this.container = ref)}>
             {isLogginActive && (
               <Login containerRef={ref => (this.current = ref)} />
             )}

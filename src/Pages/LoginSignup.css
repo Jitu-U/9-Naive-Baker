@@ -8,6 +8,14 @@
 	font-family: "Open Sans", sans-serif;
 }
 
+.login_img{
+	height: 600px;
+	width: 500px;
+	transform: translateX(-40%);
+	border: none;
+	box-shadow: none;
+}
+
 .App-logo {
 	animation: App-logo-spin infinite 20s linear;
 	height: 40vmin;
@@ -48,9 +56,10 @@
 	margin-top: 5px;
 	position: relative;
 	z-index: 99;
+	transform: translateX(20%);
 }
 
-.login .container {
+.login .containerr {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -59,10 +68,9 @@
 	border-radius: 4px;
 	position: relative;
 	z-index: 99;
-	width: 100%;
-	height: 100%;
+	height: 25rem;
 	z-index: 99;
-	padding: 17px 10px;
+	padding: 17px 3rem;
 }
 
 .login .right-side {
