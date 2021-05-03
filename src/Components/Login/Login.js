@@ -26,8 +26,16 @@ class Login extends React.Component {
         password : this.state.password
       })
       .then(res=>{
+        if(res.data.ok == "true")
+        {
           console.log(res.data)
+          alert("Successfully logged in")
           window.location = "http://localhost:3000/"
+        }
+        else
+        {
+          alert(res.data.err.msg);
+        }
       })
       .catch(res => { alert(res) })
     }
