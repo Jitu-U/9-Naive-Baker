@@ -49,8 +49,10 @@ function Navbar(){
 
         <div className="Nav-Right-parent">
           <div className="Nav-Right">
+          <Link to='/SearchPage'>
+              Search Page
+          </Link>
           <SearchBox/>
-          
           <Notifications/>
           {ProfileMenu()}
         </div>
