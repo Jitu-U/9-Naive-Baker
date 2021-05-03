@@ -25,7 +25,7 @@
 .Display{
     font-style: "SF Pro";
     font-size: 28px;
-    color: #00000;
+    color: #000000;
     font-weight: 700;
     margin-left: 4%;
 }
@@ -68,7 +68,7 @@ border: 2px solid rgba(255, 105, 97, 0.92);
 .VegNonLogo {
   margin-left: 2vw;
 }
-img {
+.upper_img {
   border-radius: 13px;
 box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.16);
 max-width: 20vw;
