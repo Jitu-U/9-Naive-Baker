@@ -1,4 +1,3 @@
-import "./upload.css";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
@@ -6,6 +5,8 @@ import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
+import "./upload.css";
+
 const useStyles = makeStyles((theme) => ({
   button: {
     display: "block",
@@ -46,11 +47,9 @@ function Upload() {
   };
   return (
     <>
-      <div className="container">
-        <h2 style={{ color: "white", "font-weight": "700" }}>Upload Recipe</h2>
-          <form
-            style={{ "justify-content": "center", "align-items": "center" }}
-          >
+      <div className="container-upload">
+        <div className="upload-title">Upload Recipe</div>
+          <form style={{ "justify-content": "center", "align-items": "center" }}>
             <div className="mb-3 mt-4" >
               <TextField id="outlined-basic" label="Title" variant="outlined" style={{'width':'400px'}}/>
             </div>
@@ -74,8 +73,9 @@ function Upload() {
               />
             </div>
             <div className="mb-3">
+              <h4>Procedure</h4>
               <TextField
-              style={{'width':'400px'}}
+              style={{'width':'400px', 'outline':'none'}}
                 id="outlined-multiline-static"
                 label="Procedure"
                 multiline

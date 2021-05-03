@@ -1,16 +1,24 @@
+.container-upload{
+    width: 60vmax;
+    background-color: rgba(255, 255, 255, 0.082);
+    border-color: rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.16);
+    border-radius: 13px;
+    justify-content: center;
+    align-content: center;
+    padding: 30px;
+    margin-left: 20vmax;
+    margin-right: 20vmax;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
 
-  h2 {
-    color: rgb(31, 31, 31);
-  }
-  
-  .container {
-    font-family: 'Montserrat', sans-serif;
+.mb-3{
+    display: block;
+}
+
+.upload-title{
     font-weight: 700;
-    color: rgb(222, 253, 107);
-    width: 40%;
-    background: linear-gradient(to right, #55b7e0, #95c3d3, #cedee6);
-    border-radius: 8px;
-    padding-top: 50px;
-    margin-top: 50px;
-    padding-bottom: 50px;
-  }
+    font-size: 33px;
+    margin-left: 20vw;
+}
