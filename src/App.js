@@ -13,6 +13,7 @@ import SearchPage from './Pages/SearchPage';
 function App() {
   return (
     <BrowserRouter>
+
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/LoginSignup" component={LoginSignup} />
