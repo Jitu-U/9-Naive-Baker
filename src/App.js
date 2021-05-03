@@ -13,7 +13,6 @@ import ForgetPassword from './Pages/ForgetPassword';
 function App() {
   return (
     <BrowserRouter>
-
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/LoginSignup" component={LoginSignup} />

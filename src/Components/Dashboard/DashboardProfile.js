@@ -3,7 +3,8 @@ import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import { RiEdit2Line } from "react-icons/ri";
 
-function Profile(props) {
+export default function DashboardProfile({data}) {
+  console.log(data);
   return (
     <div class="main_card">
     <div className="profile">
@@ -12,7 +13,7 @@ function Profile(props) {
         <div className="photobox">
           <img src="https://seventhqueen.com/themes/kleo/wp-content/uploads/rtMedia/users/44269/2020/07/dummy-profile.png"></img>
          </div>
-          <h1>Username</h1>
+          <h1>{data.user.name}</h1>
           <span className="bioicon">
               <a href="#"><Button variant="contained" color='primary'>113 followers</Button></a>
             </span>
@@ -58,4 +59,3 @@ function Profile(props) {
   );
 }
 
-export default Profile;
