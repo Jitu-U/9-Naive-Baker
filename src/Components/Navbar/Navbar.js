@@ -7,6 +7,7 @@ import "./Navbar.css"
 import SearchBox from "../search-box/Search-Box";
 import {FcUpload} from "react-icons/fc"
 
+
 function Navbar(){
   const [click, setClick] = useState(false);
   var loggedIN = false;
@@ -51,6 +52,9 @@ function Navbar(){
           
           <Link className="upload-btn" to='/Upload'>
           <FcUpload/>
+              Upload
+          </Link>
+          <Link to='/Upload'>
               Upload
           </Link>
           <SearchBox/>
