@@ -2,55 +2,31 @@ import React from 'react';
 import Avatar from '../avatar/avatar';
 import Classes from './card.module.css';
 import { FcLikePlaceholder, FcLike } from 'react-icons/fc'
-import { MdPlaylistAdd, MdPlaylistAddCheck, MdShare } from 'react-icons/md'
+import { MdPlaylistAdd, MdPlaylistAddCheck, MdShare, MdOpenInNew } from 'react-icons/md'
 import { Redirect, Link, useHistory } from 'react-router-dom';
 
 
-
-export default function Card(props) {
-
+export default function Card({ r }) {
+    console.log(r);
     const history = useHistory();
 
     const handlecardclick = (event) => {
         event.preventDefault();
         console.log("card click")
-        history.push({pathname:'/RecipePage',state : props.r});
+        history.push({ pathname: '/RecipePage', state: r });
     };
 
-    let VegStatus = false;
+    let VegStatus = (r.category === "Veg") ? true : false;
     let vegi = "#03550f"; // Veg or Nonveg tag
     if (!VegStatus) {
         vegi = "#930000";
     }
 
-    let displayTag = [];
-    for (let i = 0; i < props.tags.length; i++) {
-        if (i + 1 === props.tags.length) {
-            displayTag.push(
-                <p className={Classes.Tag}>{props.tags[i][0]}</p>
-
-
-            );
-        }
-        else {
-            displayTag.push(
-                <>
-                    <p className={Classes.Tag}>{props.tags[i][0]}</p>
-                    <p className={Classes.Tag}>{props.tags[i][1]}</p>
-                </>
-            );
-        }
-    }
-
-
-
     return (
 
-        <div className={Classes.Card} onClick={handlecardclick}>
+        <div className={Classes.Card}>
             <div style={{ display: "inline-block", width: "100%" }}>
-
                 <div className={Classes.Title}>
-
                     <div>
                         <svg id="Veg-Nonveg-Logo" className={Classes.VegNonLogo} width="20" height="20" viewBox="0 0 21 21">
                             <g id="Rectangle_3" data-name="Rectangle 3" fill="none" stroke={vegi} stroke-width="2.1">
@@ -63,16 +39,21 @@ export default function Card(props) {
                             </g>
                         </svg>
                     </div>
-                    <p>{props.title}</p>
+                    <p>{r.title}</p>
                 </div>
             </div>
             <div className={Classes.info}>
                 <div className={Classes.pict}>
-                    <img src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1126,w_2000,x_0,y_181/f_auto,q_auto,w_1100/v1554932288/shape/mentalfloss/12531-istock-637790866.jpg"></img>
-                    <div lassName={Classes.infoBox}><div style={{ display: "inline-block" }}>
-                        <Avatar />
-                        {displayTag}
-                    </div>
+                    <img src={r.picURL}></img>
+                    <div lassName={Classes.infoBox}>
+                        <div style={{ display: "inline-block" }}>
+                            <Avatar r={r}/>
+                            <p className={Classes.Tag}>{r.mealType}</p>
+                            <br/>
+                            <p className={Classes.Tag}>{r.cuisine}</p>
+                            <br/>
+                            <p className={Classes.Tag}>{r.ingredients[0].ingname}</p>
+                        </div>
                         <div className={Classes.actions}>
                             <div className={Classes.Button}>
                                 <FcLikePlaceholder size={30} />
@@ -80,15 +61,12 @@ export default function Card(props) {
                             <div className={Classes.Button}>
                                 <MdPlaylistAdd size={30} />
                             </div>
-                            <div className={Classes.Button}>
-                                <MdShare size={30} />
+                            <div className={Classes.Button} onClick={handlecardclick} >
+                                <MdOpenInNew size={30} />
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
     );

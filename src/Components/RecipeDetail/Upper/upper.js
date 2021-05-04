@@ -37,8 +37,6 @@ function Upper({ Rec }) {
       </div>
 
       <div className={Classes.Middle}>
-          <button className={Classes.Button}>{click ? <MdPlaylistAddCheck /> : <MdPlaylistAdd />}</button>
-          <div onClick={handleClick}>{click ? <FcLike size={30} /> : <FcLikePlaceholder size={30} />} {NLikes}</div>
           <p> {Rec.mealType} </p>
           <p> {Rec.cuisine} </p>
           <p> Recipe By : {Rec.chefname} </p>
