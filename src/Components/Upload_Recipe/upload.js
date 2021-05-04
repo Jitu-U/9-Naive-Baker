@@ -6,6 +6,8 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import "./upload.css";
+import {Link} from 'react-router-dom'
+import {IoCloseSharp} from 'react-icons/io5'
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -48,6 +50,11 @@ function Upload() {
   return (
     <>
       <div className="container-upload">
+          <Link  className="close-btn" to="/">
+          <IoCloseSharp  className size={44}/> <div>Close</div>
+          </Link>
+
+
         <div className="upload-title">Upload Recipe</div>
           <form style={{ "justify-content": "center", "align-items": "center" }}>
             <div className="mb-3 mt-4" >
