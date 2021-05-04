@@ -32,6 +32,7 @@ class ResetPassword extends React.Component {
     .then(res => {
       if(res.data.ok === true)
       {
+        alert("OTP sent successfully");
         this.setState({authtoken : res.data.data.token});
         console.log(this.state.authtoken);
       }
@@ -45,19 +46,17 @@ class ResetPassword extends React.Component {
   }
   mysubmit = (event) => {
     event.preventDefault();
-    Axios.put(this.state.url2,{
-      header: {
-        authtoken : this.state.token
-      },
-      body: {
-        otp : this.state.otp,
+    console.log(this.state.email + " " + this.state.otp + " " + this.state.newpassword);
+    Axios.post(this.state.url2,{
+        email : this.state.email,
+        OTP : this.state.otp,
         password : this.state.newpassword
-        }
     })
     .then(res => {
+      console.log(this.state.email + " " + this.state.otp + " " + this.state.newpassword);
       if(res.data.ok === true)
       {
-        alert("Password Reset Successful")
+        alert("Password Reset Successful");
       }
       else
       {
@@ -71,21 +70,21 @@ class ResetPassword extends React.Component {
     return (
       <div className="base-container">
           <div className="content">
-            <div className="form">
+            <div className="formm">
             <div className="header">Forgot Password</div>
-              <div className="form-group">
-                <label htmlFor="email">email</label>
+              <div className="form-groupp">
+                <label htmlFor="email">Email</label>
                 <input type="text" name="email" onChange={this.handle} placeholder="email" />
               </div>
               <div className="footer">
             <button type="button" className="btn" onClick={(e)=>this.mysubmit1(e)}>
               Get otp
             </button>
-            <div className="form-group">
+            <div className="form-groupp">
                 <label htmlFor="email">OTP</label>
                 <input type="text" name="otp" onChange={this.handle} placeholder="otp" />
               </div>
-              <div className="form-group">
+              <div className="form-groupp">
                 <label htmlFor="password">New Password</label>
                 <input type="password" name="newpassword" onChange={this.handle} placeholder="password" />
               </div>
