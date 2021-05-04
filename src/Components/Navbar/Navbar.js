@@ -54,9 +54,6 @@ function Navbar(){
           <FcUpload/>
               Upload
           </Link>
-          <Link to='/Upload'>
-              Upload
-          </Link>
           <SearchBox/>
           {ProfileMenu()}
         </div>
