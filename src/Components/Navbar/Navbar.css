@@ -26,6 +26,7 @@
   justify-self: start;
   font-family: Noteworthy;
     margin-top: 30px;
+    margin-left: 2vw;
     cursor: pointer;
     text-decoration: none;
     font-size: 2.5rem;
@@ -42,16 +43,11 @@
 
 .Nav-Right{
   position: absolute;
-  left: 15rem;
+  left: 5rem;
   display: inline-flex;
   justify-content: flex-end;
 }
 
-.notif{
-  padding: 20px;
-  display: block;
-  margin-right: 100px;
-}
 
 .join-btn {
   float: right;
@@ -118,3 +114,22 @@ SearchBox{
   color: #000;
 
 }
+
+
+.upload-btn{
+  background-color: white;
+  display: inline;
+  width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 13px;
+  padding-top: 10px;
+  color: black;
+}
+
+.upload-btn:hover{
+      background-color: rgba(0, 110, 255, 0.522);
+      box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.16);
+      color: white;
+}
+

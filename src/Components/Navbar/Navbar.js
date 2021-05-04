@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch, Redirect, Link } from "react-router-dom"
 import "./Navbar.css"
 import SearchBox from "../search-box/Search-Box";
-import {} from "react-icons/fa"
+import {FcUpload} from "react-icons/fc"
 
 function Navbar(){
   const [click, setClick] = useState(false);
@@ -48,10 +48,9 @@ function Navbar(){
 
         <div className="Nav-Right-parent">
           <div className="Nav-Right">
-          <Link to='/SearchPage'>
-              Search Page
-          </Link>
-          <Link to='/Upload'>
+          
+          <Link className="upload-btn" to='/Upload'>
+          <FcUpload/>
               Upload
           </Link>
           <SearchBox/>
