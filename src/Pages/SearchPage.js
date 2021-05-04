@@ -141,7 +141,7 @@ export default function SearchPage() {
         <>
             {isError && <div>Something went wrong ...</div>}
             {loading === false &&
-                <div className="main">
+                <div className="Search-container">
                     <div className="search">
                         <Select
                             isMulti
