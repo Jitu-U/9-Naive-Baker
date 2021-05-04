@@ -44,8 +44,6 @@ class ResetPassword extends React.Component {
     })
     .catch(res => { alert(res) })
   }
-
-
   mysubmit = (event) => {
     event.preventDefault();
     console.log(this.state.email + " " + this.state.otp + " " + this.state.newpassword);
@@ -68,8 +66,6 @@ class ResetPassword extends React.Component {
     })
     .catch(res => { alert(res) })
   }
-
-
   render(){
     return (
       <div className="base-container">
