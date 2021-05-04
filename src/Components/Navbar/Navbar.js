@@ -5,7 +5,6 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch, Redirect, Link } from "react-router-dom"
 import "./Navbar.css"
 import SearchBox from "../search-box/Search-Box";
-import Notifications from "../Notifications/Notifications"
 import {} from "react-icons/fa"
 
 function Navbar(){
@@ -52,8 +51,10 @@ function Navbar(){
           <Link to='/SearchPage'>
               Search Page
           </Link>
+          <Link to='/Upload'>
+              Upload
+          </Link>
           <SearchBox/>
-          <Notifications/>
           {ProfileMenu()}
         </div>
         </div>
