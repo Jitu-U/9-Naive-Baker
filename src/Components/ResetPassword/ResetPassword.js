@@ -1,56 +1,105 @@
 
 // Update the Code
 
-import React from "react";
+import React, { useState } from "react";
+import Axios from "axios";
 import { Link } from "react-router-dom";
 import "./ResetPassword.css";
 
-function ResetPassword() {
-
+class ResetPassword extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      authtoken: "",
+      otp: "",
+      newpassword:"",
+      url : "https://naivebakerr.herokuapp.com/user/forgetpassword",
+      url2 : "https://naivebakerr.herokuapp.com/user/resetpassword"
+    }
+  }
+  handle = (event) => {
+    let id = event.target.name;
+    let val = event.target.value;
+    console.log(id + " " + val);
+    this.setState({[id]:val});
+  }
+  mysubmit1 = (event) => {
+    event.preventDefault();
+    Axios.post(this.state.url,{
+      email : this.state.email
+    })
+    .then(res => {
+      if(res.data.ok === true)
+      {
+        this.setState({authtoken : res.data.data.token});
+        console.log(this.state.authtoken);
+      }
+      else
+      {
+        console.log(res.data);  
+        alert(res.data.err.msg);
+      }
+    })
+    .catch(res => { alert(res) })
+  }
+  mysubmit = (event) => {
+    event.preventDefault();
+    Axios.put(this.state.url2,{
+      header: {
+        authtoken : this.state.token
+      },
+      body: {
+        otp : this.state.otp,
+        password : this.state.newpassword
+        }
+    })
+    .then(res => {
+      if(res.data.ok === true)
+      {
+        alert("Password Reset Successful")
+      }
+      else
+      {
+        console.log(res.data);  
+        alert(res.data.err.msg);
+      }
+    })
+    .catch(res => { alert(res) })
+  }
+  render(){
     return (
-      <div>
-        <div>
-          <form /*onSubmit={handleSendCodeClick}*/ >
+      <div className="base-container">
+          <div className="content">
+            <div className="form">
+            <div className="header">Forgot Password</div>
+              <div className="form-group">
+                <label htmlFor="email">email</label>
+                <input type="text" name="email" onChange={this.handle} placeholder="email" />
+              </div>
+              <div className="footer">
+            <button type="button" className="btn" onClick={(e)=>this.mysubmit1(e)}>
+              Get otp
+            </button>
+            <div className="form-group">
+                <label htmlFor="email">OTP</label>
+                <input type="text" name="otp" onChange={this.handle} placeholder="otp" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="password">New Password</label>
+                <input type="password" name="newpassword" onChange={this.handle} placeholder="password" />
+              </div>
+              <button type="button" className="btn" onClick={(e)=>this.mysubmit(e)}>
+              Reset
+            </button>
+          </div>
+            </div>
             
-              <textarea >Email</textarea>
-            
-            <button
-              block
-              type="submit"
-              bsSize="large"
-            > Send Confirmation </button>
-          </form>
-        </div>
-  
-        <div>
-          <form /*onSubmit={handleConfirmClick}*/ >
-            
-              <textarea >Confirmation Code</textarea>
-            
-            <hr />
+          </div>
           
-            <textarea >New Password</textarea>
-          
-            <textarea >Confirm Password</textarea>
-          
-            <button
-              block
-              //type="submit"
-              bsSize="large"
-            >Confirm </button>
-          </form>
         </div>
-      
-        <div>
-            <p>Your password has been reset.</p>
-          <p>
-              <Link to="./Login/Login.js">
-                Click here to login with your new credentials.
-              </Link>
-            </p> 
-        </div>
-      </div>
     );
+  }
 
 }
 
