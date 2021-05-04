@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import Axios from "axios";
 import "./Login.css";
 import loginImg from "./login.jpg";
-import { Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+
 
 class Login extends React.Component {
     constructor(props) {
@@ -21,19 +22,21 @@ class Login extends React.Component {
       this.setState({[id]:val});
     }
     mysubmit = (event) => {
+      event.preventDefault();
+      console.log(this.state.email,this.state.password);
       Axios.post(this.state.url,{
         email : this.state.email,
         password : this.state.password
       })
-      .then(res=>{
-        if(res.data.ok == "true")
+      .then(res => {
+        if(res.data.ok === true)
         {
-          console.log(res.data)
-          alert("Successfully logged in")
-          window.location = "http://localhost:3000/"
+          localStorage.setItem('auth-token',res.data.data.token);
+          this.props.history.push('/');
         }
         else
         {
+          console.log(res.data);  
           alert(res.data.err.msg);
         }
       })
@@ -68,4 +71,4 @@ class Login extends React.Component {
     }
   }
 
-export default Login;
+export default withRouter(Login);
