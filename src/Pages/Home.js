@@ -11,8 +11,7 @@ import RecipeCard from '../Components/RecipeCard/RecipeCard';
 export default function Home({ recipes }) {
   return (
     <>
-      {isError && <div>Something went wrong ...</div>}
-      <Navbar className="Nav"/>
+      <Navbar className="Nav" isAuth={isAuth}/>
       {
         recipes.length !== 0 &&
         <div className="Home">

@@ -28,7 +28,7 @@ const optionsCuisines = [
     { value: 'Chinese', label: 'Chinese' }
 ];
 
-export default function SearchPage() {
+export default function SearchPage({isAuth}) {
 
     const [ingredients, setIngredients] = useState([]);
     const [chefnames, setChefnames] = useState([]);
@@ -134,7 +134,7 @@ export default function SearchPage() {
                 })
             setLoading(false);
         }
-
+        console.log("sp");
         fetch();
     }, []);
 
@@ -143,7 +143,8 @@ export default function SearchPage() {
             {isError && <div>Something went wrong ...</div>}
             {loading === false &&
                 <>
-                    <Navbar/>
+                    <Navbar isAuth={isAuth}/>
+
                     <div className="Search-container">
                         <div className="search">
                             <Select
