@@ -91,6 +91,7 @@ SearchBox{
   justify-content: flex-start;
   padding: 0px 25px;
   font-size: 13px;
+  cursor: pointer;
 }
 
 .Profile-Pic{
