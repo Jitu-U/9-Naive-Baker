@@ -53,14 +53,20 @@
 }
 
 .Filters{
-  justify-content: block;
-  width: 48px;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
   height: 37px;
   margin-right: 1rem;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   background:rgba(0, 0, 29, 0.16);
   box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.16);
+  font-size: 20px;
+  padding-left: 1vmax;
+  padding-top: 0.3vmax;
+  cursor: pointer;
+
 }
 
 .search-advanced-hidden{
@@ -91,28 +97,4 @@ animation: 3s;
 .icon{
   margin-top: 6px;
   margin-left: 2px;
-}
-
-.Filter-Menu{
-  background-color: white;
-  z-index: 999;
-  box-shadow: inherit;
-  border-radius: 13px;
-  margin-top: 10px;
-  height: 300px;
-  width: 200px;
-  display: block;
-}
-.Menu-item{
-    margin-left: 10px;
-    display: inline;
-}
-
-.F-input{
-  text-decoration: none;
-  outline: none;
-  width: 150px;
-  border-color: #ffffff;
-  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.16);
-  text-size-adjust: auto;
 }

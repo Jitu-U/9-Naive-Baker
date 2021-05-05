@@ -32,11 +32,4 @@
   display: inline-grid;
 }
 
-.navbar{
-  position: sticky;
-  display: block;
-  background-color: #ffffff;
-  width: 70%;
-  margin-bottom: 3px;
-  z-index: 100 ;
-}
+

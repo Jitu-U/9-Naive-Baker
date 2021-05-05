@@ -22,3 +22,14 @@
     font-size: 33px;
     margin-left: 20vw;
 }
+
+.close-btn{
+    position: relative;
+    right: 30vw;
+    left:56vw;
+    color: black;
+    display: inline-block;
+    justify-content: center;
+    font-size: medium;
+}
+
