@@ -1,10 +1,16 @@
 .Left{
     margin-top: 5px;
-    width: 40%;
+    width: 20%;
+    height: 180px;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(255, 0, 0, 0.05);
+    border: 1px solid #7070702a;
 }
 
 .Middle{
     width: 20%;
+    margin-left: 20px;
 }
 
 .PhotoContainer{
@@ -25,16 +31,9 @@
 .Display{
     font-style: "SF Pro";
     font-size: 28px;
-    color: #000000;
+    color: #104944;
     font-weight: 700;
-    margin-left: 4%;
-}
-
-.UnderLine{
-  width: 300px;
-height: 0px;
-background: transparent;
-border: 2px solid rgba(255, 105, 97, 0.92);
+    margin-left: 5%;
 }
 
 .Button{
@@ -66,11 +65,15 @@ border: 2px solid rgba(255, 105, 97, 0.92);
 }
 
 .VegNonLogo {
-  margin-left: 2vw;
+  margin-left: 1vw;
 }
 .upper_img {
   border-radius: 13px;
 box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.16);
 max-width: 20vw;
 max-height: 20vw;
+}
+
+.infoSec{
+  background-color: rgb(219, 219, 219);
 }
