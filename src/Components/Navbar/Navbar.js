@@ -2,7 +2,7 @@
 //by -Jitesh & Meet
 
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Route, Switch, Redirect, Link } from "react-router-dom"
+import { useHistory, Link } from "react-router-dom"
 import "./Navbar.css"
 import SearchBox from "../search-box/Search-Box";
 import {FcUpload} from "react-icons/fc"
@@ -25,9 +25,15 @@ function Navbar(){
   }
 
   var ProfileMenu = () => {
+    const history = useHistory();
+
+    let godashboard = () => {
+      history.push("/dashboard")
+    }
+
     return(
       <>
-        <div className="Profile-Button">
+        <div className="Profile-Button"  onClick={godashboard}>
           <div className="Name">
             Jitesh Gamit
           </div>

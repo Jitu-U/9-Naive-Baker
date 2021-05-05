@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <>
       {isError && <div>Something went wrong ...</div>}
-      <Navbar />
+      <Navbar className="Nav"/>
       {
         loading === false &&
           <div className="Home">
