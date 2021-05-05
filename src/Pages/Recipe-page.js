@@ -7,14 +7,14 @@ import { MdPlaylistAdd, MdPlaylistAddCheck, MdShare } from 'react-icons/md'
 import Navbar from "../Components/Navbar/Navbar"
 import { Redirect, Link, useHistory, useLocation } from 'react-router-dom';
 
-export default function RecipePage(props) {
+export default function RecipePage({isAuth}) {
 
   const location = useLocation();
   const Rec = location.state;
 
   return (
     <>
-      <Navbar />
+      <Navbar isAuth={isAuth}/>
       <div className="container">
         <RecipeDetail Rec={Rec}/>
         <div className="Actions">

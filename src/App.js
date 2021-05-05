@@ -43,7 +43,7 @@ function App() {
     fetch();
 
     const auth = localStorage.getItem('auth-token');
-    if (auth !== undefined) {
+    if (auth !== null) {
       setisAuth(true);
     }
   }, [])
@@ -55,18 +55,32 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <Home recipes={recipes}/>
+            <Home recipes={recipes} isAuth={isAuth} setisAuth={setisAuth}/>
           </Route>
-          <Route path="/LoginSignup" component={LoginSignup} />
-          <Route path="/Dashboard" component={Dashboard} />
-          <Route path="/RecipePage" component={RecipePage} />
-          <Route path="/PublicProfile" component={PublicProfile} />
+          <Route path="/LoginSignup">
+            <LoginSignup isAuth={isAuth} setisAuth={setisAuth}/>
+          </Route>
+          <Route path="/Dashboard">
+            <Dashboard isAuth={isAuth} setisAuth={setisAuth}/>
+          </Route>
+          <Route path="/RecipePage">
+            <RecipePage isAuth={isAuth} setisAuth={setisAuth}/>
+          </Route>
+          <Route path="/PublicProfile">
+            <PublicProfile isAuth={isAuth} setisAuth={setisAuth}/>
+          </Route>
           <Route path="/Upload">
             <UploadRecipe setRecipes={setRecipes}/>
           </Route>
-          <Route path="/ResetPassword" component={ForgetPassword} />
-          <Route path="/SearchPage" component={SearchPage} />
-          <Route path="/ForgetPassword" component={ForgetPassword} />
+          <Route path="/ResetPassword">
+            <ForgetPassword isAuth={isAuth} setisAuth={setisAuth}/>
+          </Route>
+          <Route path="/SearchPage">
+            <SearchPage isAuth={isAuth} setisAuth={setisAuth}/>
+          </Route>
+          <Route path="/ForgetPassword">
+            <ForgetPassword isAuth={isAuth} setisAuth={setisAuth}/>
+          </Route>
         </Switch>
       </BrowserRouter>
     </>

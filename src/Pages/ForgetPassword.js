@@ -2,10 +2,10 @@ import React from 'react';
 import Navbar from "../Components/Navbar/Navbar"
 import ResetPassword from "../Components/ResetPassword/ResetPassword"
 
-function ForgetPassword() {
+function ForgetPassword({isAuth}) {
       return(
         <>
-        <Navbar/>
+        <Navbar isAuth={isAuth}/>
         <ResetPassword/>
         </>
       )

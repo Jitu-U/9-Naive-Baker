@@ -2,10 +2,10 @@ import React from 'react';
 import Navbar from "../Components/Navbar/Navbar"
 import ProfileOther from '../Components/profile_other/profile-other';
 
-function PublicProfile() {
+function PublicProfile({isAuth}) {
       return(
         <>
-        <Navbar/>
+        <Navbar isAuth={isAuth}/>
         <ProfileOther/>
         </>
       )

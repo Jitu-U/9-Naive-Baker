@@ -8,11 +8,10 @@ import axios from 'axios';
 import RecipeCard from '../Components/RecipeCard/RecipeCard';
 
 
-export default function Home({ recipes }) {
+export default function Home({ recipes, isAuth}) {
   return (
     <>
-      {isError && <div>Something went wrong ...</div>}
-      <Navbar className="Nav"/>
+      <Navbar className="Nav" isAuth={isAuth}/>
       {
         recipes.length !== 0 &&
         <div className="Home">
