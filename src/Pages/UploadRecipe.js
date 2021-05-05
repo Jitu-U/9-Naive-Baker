@@ -1,18 +1,13 @@
-//Upload page for Recipes
-
 import React from 'react';
 import Upload from "../Components/Upload_Recipe/upload"
 
 
 
-function UploadRecipe() {
+export default function UploadRecipe() {
       return(
         <>
-        
-        <Upload/>
+          <Upload/>
         </>
       )
 }
 
-
-export default UploadRecipe;

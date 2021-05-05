@@ -7,12 +7,10 @@ import { Redirect, Link, useHistory } from 'react-router-dom';
 
 
 export default function Card({ r }) {
-    console.log(r);
     const history = useHistory();
 
     const handlecardclick = (event) => {
         event.preventDefault();
-        console.log("card click")
         history.push({ pathname: '/RecipePage', state: r });
     };
 
