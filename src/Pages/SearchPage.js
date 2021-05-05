@@ -5,6 +5,7 @@ import Select from 'react-select';
 import axios from 'axios';
 import { Button } from '@material-ui/core';
 import RecipeCard from '../Components/RecipeCard/RecipeCard';
+import Navbar from '../Components/Navbar/Navbar';
 
 const optionsCategorys = [
     { value: 'Veg', label: 'Veg' },
@@ -27,7 +28,7 @@ const optionsCuisines = [
     { value: 'Chinese', label: 'Chinese' }
 ];
 
-export default function SearchPage() {
+export default function SearchPage({isAuth}) {
 
     const [ingredients, setIngredients] = useState([]);
     const [chefnames, setChefnames] = useState([]);
@@ -133,7 +134,7 @@ export default function SearchPage() {
                 })
             setLoading(false);
         }
-
+        console.log("sp");
         fetch();
     }, []);
 
@@ -141,60 +142,64 @@ export default function SearchPage() {
         <>
             {isError && <div>Something went wrong ...</div>}
             {loading === false &&
-                <div className="Search-container">
-                    <div className="search">
-                        <Select
-                            isMulti
-                            className='select-category'
-                            options={optionsCategorys}
-                            placeholder={'Recipe Category'}
-                            onChange={changeCategorys}
-                        />
-                        <Select
-                            isMulti
-                            className='select-meal'
-                            options={optionsMeals}
-                            placeholder={'Recipe Meal Types'}
-                            onChange={changeMeals}
-                        />
-                        <Select
-                            isMulti
-                            className='select-cuisine'
-                            options={optionsCuisines}
-                            placeholder={'Recipe Cuisine Types'}
-                            onChange={changeCuisines}
-                        />
-                        <Select
-                            isMulti
-                            className='select-chef'
-                            options={optionChefs}
-                            placeholder={'Chefs'}
-                            onChange={changeChefs}
-                        />
-                        <Select
-                            isMulti
-                            className='select-ingredient'
-                            options={optionsIngs}
-                            placeholder={'Recipe Ingredients'}
-                            onChange={changeIngs}
-                        />
-                        <label>
-                            Preparation Time
+                <>
+                    <Navbar isAuth={isAuth}/>
+
+                    <div className="Search-container">
+                        <div className="search">
+                            <Select
+                                isMulti
+                                className='select-category'
+                                options={optionsCategorys}
+                                placeholder={'Recipe Category'}
+                                onChange={changeCategorys}
+                            />
+                            <Select
+                                isMulti
+                                className='select-meal'
+                                options={optionsMeals}
+                                placeholder={'Recipe Meal Types'}
+                                onChange={changeMeals}
+                            />
+                            <Select
+                                isMulti
+                                className='select-cuisine'
+                                options={optionsCuisines}
+                                placeholder={'Recipe Cuisine Types'}
+                                onChange={changeCuisines}
+                            />
+                            <Select
+                                isMulti
+                                className='select-chef'
+                                options={optionChefs}
+                                placeholder={'Chefs'}
+                                onChange={changeChefs}
+                            />
+                            <Select
+                                isMulti
+                                className='select-ingredient'
+                                options={optionsIngs}
+                                placeholder={'Recipe Ingredients'}
+                                onChange={changeIngs}
+                            />
+                            <label>
+                                Preparation Time
                             <input type="number" value={preparationTime} onChange={changepreparationTime} />
-                        </label>
-                        <Button onClick={handleButtonclick} variant="outlined" color="primary">
-                            Submit
+                            </label>
+                            <Button onClick={handleButtonclick} variant="outlined" color="primary">
+                                Submit
                         </Button>
+                        </div>
+                        <div className="line">
+                            <hr></hr>
+                        </div>
+                        <div className="result">
+                            {
+                                recipes !== undefined && recipes.map(r => <RecipeCard r={r} />)
+                            }
+                        </div>
                     </div>
-                    <div className="line">
-                        <hr></hr>
-                    </div>
-                    <div className="result">
-                        {
-                            recipes !== undefined && recipes.map(r => <RecipeCard r={r}/>)
-                        }
-                    </div>
-                </div>
+                </>
             }
         </>
     )

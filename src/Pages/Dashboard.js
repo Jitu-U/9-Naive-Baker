@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import DashboardProfile from "../Components/Dashboard/DashboardProfile"
 import Navbar from "../Components/Navbar/Navbar"
 
-export default function Dashboard() {
+export default function Dashboard({isAuth}) {
 
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
@@ -16,11 +16,12 @@ export default function Dashboard() {
 
       setIsError(false);
       setLoading(true);
+      const token = localStorage.getItem('auth-token');
 
       axios.get(`https://naivebakerr.herokuapp.com/user/detail`,
         {
           headers: {
-            'auth-token': `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDc2ZDBjYzM5ODM2MDk4NjRjZWYyNGMiLCJpYXQiOjE2MTk5ODA1NTV9.UYBB7r4IvoQF4-WqlVQaN9MeGNnXoH3cy_HlMWr8khQ`
+            'auth-token': token
           }
         })
         .then(({ data }) => {
@@ -40,7 +41,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <Navbar />
+      <Navbar isAuth={isAuth} />
       {isError && <div>Something went wrong ...</div>}
       {loading === false && <DashboardProfile data={data}/>}
     </>
