@@ -46,8 +46,7 @@ function Navbar({ isAuth}) {
   const handleClick = () => setClick(!click);
 
   return (
-    <>
-  <nav className='Navbar'>
+    <nav className='Navbar'>
     <div className='navbar-container'>
       <Link to='/' className='navbar-logo' >
         Naive Baker
@@ -56,31 +55,21 @@ function Navbar({ isAuth}) {
         <div className="Nav-Right-parent">
           <div className="Nav-Right">
           
-          <Link className="upload-btn" to='/Upload'>
+          { isAuth=== true ?
+            (<Link className="upload-btn" to='/Upload'>
           <FcUpload/>
               Upload
-          </Link>
-
-          <div className="Nav-Right-parent">
-            <div className="Nav-Right">
-
-              {isAuth === true ?
-                <Link className="upload-btn" to='/Upload'>
-                  <FcUpload />  Upload
-                </Link>
-
-                :
-                <Link className="upload-btn" to='/LoginSignup'>
-                  Login
-                </Link>
-              }
-              <SearchBox />
-              {isAuth===true && ProfileMenu()}
-            </div>
-          </div>
+          </Link> ) : <></>
+          }
+          <SearchBox/>
+          {isAuth === true ?
+            <ProfileMenu/> :
+            <joinNow/>
+            }
         </div>
-      </nav>
-    </>
+        </div>
+    </div>
+  </nav>
   )
 
 }
