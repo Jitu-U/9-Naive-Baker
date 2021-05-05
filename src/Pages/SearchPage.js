@@ -144,6 +144,7 @@ export default function SearchPage({isAuth}) {
             {loading === false &&
                 <>
                     <Navbar isAuth={isAuth}/>
+
                     <div className="Search-container">
                         <div className="search">
                             <Select

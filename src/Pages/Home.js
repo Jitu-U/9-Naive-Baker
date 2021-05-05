@@ -8,7 +8,7 @@ import axios from 'axios';
 import RecipeCard from '../Components/RecipeCard/RecipeCard';
 
 
-export default function Home({ recipes, isAuth}) {
+export default function Home({ recipes }) {
   return (
     <>
       <Navbar className="Nav" isAuth={isAuth}/>
