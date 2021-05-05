@@ -1,9 +1,12 @@
 .Background{
-    background-color: none;
     margin-top: 1%;
     margin-left: 10%;
     margin-right: 10%;
-    border-radius: 5px;
+    border-radius: 8px;
+    background: #fff;
+    width: 59.5vw;
+    border: 1px solid rgba(112, 112, 112, 0.3);
+    padding: 10px;
 }
 
 .Heading{
@@ -19,3 +22,5 @@
     padding-bottom: 1%;
     text-align: justify;
 }
+
+

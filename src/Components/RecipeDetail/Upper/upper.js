@@ -39,7 +39,7 @@ function Upper({ Rec }) {
       <div className={Classes.Middle}>
           <p> {Rec.mealType} </p>
           <p> {Rec.cuisine} </p>
-          <p> Recipe By : {Rec.chefname} </p>
+          <p> By ~ {Rec.chefname} </p>
       </div>
 
       <div className={Classes.PhotoContainer}>
