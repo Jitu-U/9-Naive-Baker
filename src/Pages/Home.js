@@ -1,17 +1,18 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch, Redirect, Link, useHistory } from 'react-router-dom'
+import React,{useContext} from 'react';
 import Navbar from "../Components/Navbar/Navbar"
-import Recipe from "../Components/RecipeCard/RecipeCard"
-import "./Home.css"
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 import RecipeCard from '../Components/RecipeCard/RecipeCard';
+import {RecipeContext} from '../Contexts/context';
+import "./Home.css"
 
 
-export default function Home({ recipes, isAuth }) {
+export default function Home() {
+
+  const {recipes} = useContext(RecipeContext);
+
   return (
     <>
-      <Navbar className="Nav" isAuth={isAuth}/>
+      {console.log("home")}
+      <Navbar className="Nav"/>
       {
         recipes.length !== 0 &&
         <div className="Home">

@@ -1,8 +1,8 @@
 import './App.css';
 import React from "react";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import LoginSignup from "./Pages/LoginSignup"
 import Home from "./Pages/Home"
 import RecipePage from "./Pages/Recipe-page"
@@ -11,15 +11,16 @@ import PublicProfile from './Pages/PublicProfile';
 import UploadRecipe from './Pages/UploadRecipe';
 import ForgetPassword from './Pages/ForgetPassword';
 import SearchPage from './Pages/SearchPage';
+import { AuthDispatchContext, UserDispatchContext, RecipeDispatchContext } from './Contexts/context';
 
 function App() {
 
-  const [recipes, setRecipes] = useState([]);
-  const [isAuth, setisAuth] = useState(false);
+  const { setU } = useContext(UserDispatchContext);
+  const { setA } = useContext(AuthDispatchContext);
+  const { setR } = useContext(RecipeDispatchContext);
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-
     const fetch = () => {
 
       setIsError(false);
@@ -28,7 +29,7 @@ function App() {
         .get(`https://naivebakerr.herokuapp.com/recipe/all`)
         .then(({ data }) => {
           if (data.ok === true) {
-            setRecipes(data.data.recipe);
+            setR(data.data.recipe);
             setIsError(false);
           } else {
             setIsError(true);
@@ -44,7 +45,24 @@ function App() {
 
     const auth = localStorage.getItem('auth-token');
     if (auth !== null) {
-      setisAuth(true);
+      axios
+        .get(`https://naivebakerr.herokuapp.com/user/detail`, {
+          headers: {
+            'auth-token': auth
+          }
+        })
+        .then(({ data }) => {
+          if (data.ok === true) {
+            setU(data.data);
+            setA(true);
+            setIsError(false);
+          } else {
+            setIsError(true);
+          }
+        })
+        .catch(err => {
+          setIsError(true);
+        })
     }
   }, [])
 
@@ -55,34 +73,35 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <Home recipes={recipes} isAuth={isAuth} setisAuth={setisAuth}/>
+            <Home />
           </Route>
           <Route path="/LoginSignup">
-            <LoginSignup isAuth={isAuth} setisAuth={setisAuth}/>
+            <LoginSignup />
           </Route>
           <Route path="/Dashboard">
-            <Dashboard isAuth={isAuth} setisAuth={setisAuth}/>
+            <Dashboard />
           </Route>
           <Route path="/RecipePage">
-            <RecipePage isAuth={isAuth} setisAuth={setisAuth}/>
+            <RecipePage />
           </Route>
           <Route path="/PublicProfile">
-            <PublicProfile isAuth={isAuth} setisAuth={setisAuth}/>
+            <PublicProfile />
           </Route>
           <Route path="/Upload">
-            <UploadRecipe setRecipes={setRecipes}/>
+            <UploadRecipe />
           </Route>
           <Route path="/ResetPassword">
-            <ForgetPassword isAuth={isAuth} setisAuth={setisAuth}/>
+            <ForgetPassword />
           </Route>
           <Route path="/SearchPage">
-            <SearchPage isAuth={isAuth} setisAuth={setisAuth}/>
+            <SearchPage />
           </Route>
           <Route path="/ForgetPassword">
-            <ForgetPassword isAuth={isAuth} setisAuth={setisAuth}/>
+            <ForgetPassword />
           </Route>
         </Switch>
       </BrowserRouter>
+
     </>
   );
 }

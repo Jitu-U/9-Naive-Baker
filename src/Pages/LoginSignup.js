@@ -3,6 +3,7 @@ import "./LoginSignup.css";
 import Login from "../Components/Login/Login"
 import Register from "../Components/Login/Register"
 import loginImg from "../Components/Login/login.jpg";
+
 class LoginSignup extends React.Component {
   constructor(props) {
     super(props);
@@ -12,7 +13,6 @@ class LoginSignup extends React.Component {
   }
 
   componentDidMount() {
-    //Add .right by default
     this.rightSide.classList.add("right");
   }
 
@@ -41,7 +41,7 @@ class LoginSignup extends React.Component {
         <div className="login">
           <div className="containerr" ref={ref => (this.container = ref)}>
             {isLogginActive && (
-              <Login isAuth={this.props.isAuth} setisAuth={this.props.setisAuth} containerRef={ref => (this.current = ref)} />
+              <Login history={this.props.history} containerRef={ref => (this.current = ref)} />
             )}
             {!isLogginActive && (
               <Register containerRef={ref => (this.current = ref)} />
