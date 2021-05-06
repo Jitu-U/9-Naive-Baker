@@ -71,8 +71,7 @@
     margin-left: 50%;
     transform: translateX(-50%);
     border-radius: 20px;
-    background: rgb(174,235,238);
-background: radial-gradient(circle, rgba(174,235,238,1) 0%, rgba(160,233,148,1) 100%);
+    background-color:whitesmoke;
   }
   a {
     font-size: 22px;
