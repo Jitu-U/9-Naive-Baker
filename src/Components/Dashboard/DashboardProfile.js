@@ -1,61 +1,50 @@
 import "./Dashboard.css";
-import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
-import { RiEdit2Line } from "react-icons/ri";
+import RecipeCard from "../RecipeCard/RecipeCard";
 
-export default function DashboardProfile({data}) {
-  console.log(data);
+export default function DashboardProfile({ user }) {
   return (
     <div class="main_card">
-    <div className="profile">
-      <div className="bio">
-        <div className="bionibaju">
-        <div className="photobox">
-          <img src="https://seventhqueen.com/themes/kleo/wp-content/uploads/rtMedia/users/44269/2020/07/dummy-profile.png"></img>
-         </div>
-          <h1>{data.user.name}</h1>
-          <span className="bioicon">
-              <a href="#"><Button variant="contained" color='primary'>113 followers</Button></a>
+      <div className="profile">
+        <div className="bio">
+          <div className="bionibaju">
+            <div className="photobox">
+              <img src="https://seventhqueen.com/themes/kleo/wp-content/uploads/rtMedia/users/44269/2020/07/dummy-profile.png"></img>
+            </div>
+            <h1>{user.user.name}</h1>
+            <span className="bioicon">
+              <Button variant="outlined" color='primary'>{user.user.following.length} following</Button>
             </span>
             <span className="bioicon">
-              <a href="#"><Button variant="contained" color='primary'>123 following</Button></a>
+              <Button variant="contained" color='primary'>{user.user.followers.length} followers</Button>
             </span>
-            {/* <span className="bioicon">
-              <a href="#"><Button variant="contained" color='primary'>Edit profile</Button></a>
-            </span> */}
           </div>
-          {/* <Button variant="outlined" style={{ "margin": "20px 175px" }}>
-            <RiEdit2Line style={{ "margin-right": "8px" }} /> Edit Profile
-          </Button> */}
-        <div>
-          {/* ahi lakhjo */}
-         </div>
+        </div>
+        <div className="biobottom">
+          <div>
+            <h1>Uploaded Recipes</h1>
+            {user.uploaded.length !== 0
+              &&
+              user.uploaded.map(r => <RecipeCard r={r} />)
+            }
+          </div>
+          <div>
+            <h1>Liked Recipes</h1>
+            {user.liked.length !== 0
+              &&
+              user.liked.map(r => <RecipeCard r={r} />)
+            }
+          </div>
+          <div>
+            <h1>Saved Recipes</h1>
+            {user.saved.length !== 0
+              &&
+              user.saved.map(r => <RecipeCard r={r} />)
+            }
+          </div>
+        </div>
+       </div>
       </div>
-      {/* bio ahiya pate che */}
-      <div className="biobottom">
-        <div className="data">
-        <button className='profilebutton'>
-        <a href="#">Saved Recipes</a>
-        </button>
-        </div>
-        <div className="data">
-        <button className='profilebutton'>
-          <a href="#">Liked</a>
-          </button>
-        </div>
-        <div className="data">
-        <button className='profilebutton'>
-          <a href="#">My recipes</a>
-          </button>
-        </div>
-        <div className="data">
-        <button className='profilebutton'>
-          <a href="#">Upload recipe</a>
-          </button>
-        </div>
-      </div>
-    </div>
-    </div>
   );
 }
 

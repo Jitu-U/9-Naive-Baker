@@ -1,12 +1,22 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch, Redirect, Link, useHistory } from 'react-router-dom'
-import Navbar from "../Components/Navbar/Navbar"
-import Recipe from "../Components/RecipeCard/RecipeCard"
-import "./Home.css"
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useContext, useState, useEffect } from 'react';
+import Navbar from "../Components/Navbar/Navbar";
+import SearchBox from "../Components/search-box/Search-Box";
 import RecipeCard from '../Components/RecipeCard/RecipeCard';
+import { RecipeContext } from '../Contexts/context';
+import "./Home.css"
 
+
+export default function Home() {
+
+  const { recipes } = useContext(RecipeContext);
+
+  const [rec, setRec] = useState([]);
+
+  useEffect(() => {
+    if(recipes.length !== 0){
+      setRec(recipes);
+    }
+  }, [recipes])
 
 export default function Home({ recipes, isAuth }) {
   return (
@@ -16,8 +26,9 @@ export default function Home({ recipes, isAuth }) {
       {
         recipes.length !== 0 &&
         <div className="Home">
+          <SearchBox recipes={recipes} setRec={setRec}/>
           <div className="Home-Body-container">
-            {recipes.map(r => <RecipeCard r={r} />)}
+            {rec.map(r => <RecipeCard r={r} />)}
           </div>
         </div>
       }
