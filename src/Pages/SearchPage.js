@@ -28,7 +28,7 @@ const optionsCuisines = [
     { value: 'Chinese', label: 'Chinese' }
 ];
 
-export default function SearchPage({isAuth}) {
+export default function SearchPage() {
 
     const [ingredients, setIngredients] = useState([]);
     const [chefnames, setChefnames] = useState([]);
@@ -140,10 +140,11 @@ export default function SearchPage({isAuth}) {
 
     return (
         <>
+            {console.log("spp")}
             {isError && <div>Something went wrong ...</div>}
             {loading === false &&
                 <>
-                    <Navbar isAuth={isAuth}/>
+                    <Navbar/>
 
                     <div className="Search-container">
                         <div className="search">
