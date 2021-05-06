@@ -39,7 +39,6 @@ function Navbar() {
 
         <div className="Nav-Right-parent">
           <div className="Nav-Right">
-            <SearchBox />
             <div className="Filters" onClick={() => history.push("/SearchPage")}>
               <RiFileSearchLine />Search Page
             </div>

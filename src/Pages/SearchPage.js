@@ -24,7 +24,7 @@ const optionsCuisines = [
     { value: 'American', label: 'American' },
     { value: 'Italian', label: 'Italian' },
     { value: 'Indian', label: 'Indian' },
-    { value: 'Maxicon', label: 'Maxicon' },
+    { value: 'Maxican', label: 'Maxican' },
     { value: 'Chinese', label: 'Chinese' }
 ];
 
