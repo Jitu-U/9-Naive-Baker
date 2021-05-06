@@ -18,10 +18,11 @@ export default function Home() {
     }
   }, [recipes])
 
+export default function Home({ recipes, isAuth }) {
   return (
     <>
-      {console.log(rec)}
-      <Navbar className="Nav" />
+    <div className="VP">
+      <Navbar className="Nav" isAuth={isAuth}/>
       {
         recipes.length !== 0 &&
         <div className="Home">
@@ -31,6 +32,7 @@ export default function Home() {
           </div>
         </div>
       }
+      </div>
     </>
   );
 }
