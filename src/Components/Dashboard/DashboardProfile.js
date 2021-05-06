@@ -1,5 +1,6 @@
 import "./Dashboard.css";
 import Button from "@material-ui/core/Button";
+import RecipeCard from "../RecipeCard/RecipeCard";
 
 export default function DashboardProfile({ user }) {
   return (
@@ -12,39 +13,38 @@ export default function DashboardProfile({ user }) {
             </div>
             <h1>{user.user.name}</h1>
             <span className="bioicon">
-              <a href="#"><Button variant="contained" color='primary'>113 followers</Button></a>
+              <Button variant="outlined" color='primary'>{user.user.following.length} following</Button>
             </span>
             <span className="bioicon">
-              <a href="#"><Button variant="contained" color='primary'>123 following</Button></a>
+              <Button variant="contained" color='primary'>{user.user.followers.length} followers</Button>
             </span>
-          </div>
-          <div>
           </div>
         </div>
         <div className="biobottom">
-          <div className="data">
-            <button className='profilebutton'>
-              <a href="#">Saved Recipes</a>
-            </button>
+          <div>
+            <h1>Uploaded Recipes</h1>
+            {user.uploaded.length !== 0
+              &&
+              user.uploaded.map(r => <RecipeCard r={r} />)
+            }
           </div>
-          <div className="data">
-            <button className='profilebutton'>
-              <a href="#">Liked</a>
-            </button>
+          <div>
+            <h1>Liked Recipes</h1>
+            {user.liked.length !== 0
+              &&
+              user.liked.map(r => <RecipeCard r={r} />)
+            }
           </div>
-          <div className="data">
-            <button className='profilebutton'>
-              <a href="#">My recipes</a>
-            </button>
-          </div>
-          <div className="data">
-            <button className='profilebutton'>
-              <a href="#">Upload recipe</a>
-            </button>
+          <div>
+            <h1>Saved Recipes</h1>
+            {user.saved.length !== 0
+              &&
+              user.saved.map(r => <RecipeCard r={r} />)
+            }
           </div>
         </div>
+       </div>
       </div>
-    </div>
   );
 }
 
