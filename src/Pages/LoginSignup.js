@@ -41,7 +41,7 @@ class LoginSignup extends React.Component {
         <div className="login">
           <div className="containerr" ref={ref => (this.container = ref)}>
             {isLogginActive && (
-              <Login containerRef={ref => (this.current = ref)} />
+              <Login isAuth={this.props.isAuth} setisAuth={this.props.setisAuth} containerRef={ref => (this.current = ref)} />
             )}
             {!isLogginActive && (
               <Register containerRef={ref => (this.current = ref)} />
