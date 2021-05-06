@@ -11,6 +11,7 @@ import RecipeCard from '../Components/RecipeCard/RecipeCard';
 export default function Home({ recipes, isAuth }) {
   return (
     <>
+    <div className="VP">
       <Navbar className="Nav" isAuth={isAuth}/>
       {
         recipes.length !== 0 &&
@@ -20,6 +21,7 @@ export default function Home({ recipes, isAuth }) {
           </div>
         </div>
       }
+      </div>
     </>
   );
 }
