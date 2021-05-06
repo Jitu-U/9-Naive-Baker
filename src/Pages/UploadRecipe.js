@@ -1,7 +1,8 @@
 import React from 'react';
 import Upload from "../Components/Upload_Recipe/upload"
+import {withRouter} from 'react-router-dom';
 
-export default function UploadRecipe() {
+function UploadRecipe() {
   return (
     <>
       {console.log("up")}
@@ -9,4 +10,6 @@ export default function UploadRecipe() {
     </>
   )
 }
+
+export default withRouter(UploadRecipe);
 
