@@ -43,8 +43,8 @@ export default function DashboardProfile({ user }) {
             }
           </div>
         </div>
+       </div>
       </div>
-    </div>
   );
 }
 
