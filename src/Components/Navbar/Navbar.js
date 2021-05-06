@@ -34,29 +34,27 @@ function Navbar() {
 
   return (
     <nav className='Navbar'>
-    <div className='navbar-container'>
-      <Link to='/' className='navbar-logo' >
-        Naive Baker
-      </Link>
+      <div className='navbar-container'>
+        <Link to='/' className='navbar-logo'>Naive Baker</Link>
 
         <div className="Nav-Right-parent">
           <div className="Nav-Right">
-          
-          { isAuth=== true ?
-            (<Link className="upload-btn" to='/Upload'>
-          <FcUpload/>
-              Upload
-          </Link> ) : <></>
-          }
-          <SearchBox/>
-          {isAuth === true ?
-            <ProfileMenu/> :
-            <joinNow/>
+            <div className="Filters" onClick={() => history.push("/SearchPage")}>
+              <RiFileSearchLine />Search Page
+            </div>
+            {isAuth &&
+              <Link className="upload-btn" to='/Upload'>
+                <FcUpload />Upload
+              </Link>
             }
+            {isAuth === true ?
+              <ProfileMenu /> :
+              <JoinNow />
+            }
+          </div>
         </div>
-        </div>
-    </div>
-  </nav>
+      </div>
+    </nav>
   )
 }
 
