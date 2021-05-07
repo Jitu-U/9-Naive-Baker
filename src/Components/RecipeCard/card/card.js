@@ -39,7 +39,7 @@ export default function Card({ r }) {
                 setIssaved(true);
             }
         }
-    }, []);
+    }, [user]);
 
     const handlecardclick = (event) => {
         event.preventDefault();
