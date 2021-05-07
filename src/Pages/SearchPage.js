@@ -162,6 +162,7 @@ export default function SearchPage() {
                                 placeholder={'Recipe Category'}
                                 onChange={changeCategorys}
                             />
+                            <br></br>
                             <Select
                                 isMulti
                                 className='select-meal'
@@ -169,6 +170,7 @@ export default function SearchPage() {
                                 placeholder={'Recipe Meal Types'}
                                 onChange={changeMeals}
                             />
+                                                        <br></br>
                             <Select
                                 isMulti
                                 className='select-cuisine'
@@ -176,6 +178,7 @@ export default function SearchPage() {
                                 placeholder={'Recipe Cuisine Types'}
                                 onChange={changeCuisines}
                             />
+                                                        <br></br>
                             <Select
                                 isMulti
                                 className='select-chef'
@@ -183,6 +186,7 @@ export default function SearchPage() {
                                 placeholder={'Chefs'}
                                 onChange={changeChefs}
                             />
+                                                        <br></br>
                             <Select
                                 isMulti
                                 className='select-ingredient'
@@ -190,23 +194,31 @@ export default function SearchPage() {
                                 placeholder={'Recipe Ingredients'}
                                 onChange={changeIngs}
                             />
+                                                        <br></br>
+                            <div class="prep">
                             <label>
-                                Preparation Time
-                            <input type="number" value={preparationTime} onChange={changepreparationTime} />
+                                Preparation Time &nbsp; &nbsp; &nbsp;
+                             <input type="number" value={preparationTime} onChange={changepreparationTime} />
+
                             </label>
-                            <Button onClick={handleButtonclick} variant="outlined" color="primary">
+                            </div>
+                            <br></br>                            
+                            <div class="btn-search" onClick={handleButtonclick}>
+                                
                                 Submit
-                        </Button>
+                                
+                            </div>
                         </div>
                         <div className="line">
                             <hr></hr>
                         </div>
-                        <div className="result">
+                        
+                    </div>
+                    <div className="result">
                             {
                                 recipes !== undefined && recipes.map(r => <RecipeCard r={r} />)
                             }
                         </div>
-                    </div>
                 </>
             }
         </>

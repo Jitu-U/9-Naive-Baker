@@ -42,8 +42,10 @@
 }
 
 .Nav-Right{
-  position: absolute;
-  left: 5rem;
+  /* position: absolute; */
+  /* left: 5rem; */
+  margin-left: 100%;
+  margin-top: 3rem;
   display: inline-flex;
   justify-content: flex-end;
 }
@@ -123,13 +125,16 @@ SearchBox{
   width: 100px;
   padding-left: 10px;
   padding-right: 10px;
-  border-radius: 13px;
+  border-radius: 6px;
   padding-top: 10px;
-  color: black;
+  color: white;
+	background-color: #037e8c;
 }
-
+.icon-color-upload{
+  color: white;
+}
 .upload-btn:hover{
-      background-color: rgba(0, 110, 255, 0.522);
+    	background-color: #13c0e5;
       box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.16);
       color: white;
 }
