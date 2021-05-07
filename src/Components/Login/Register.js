@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Axios from "axios";
 import "./Login.css";
 import loginImg from "./login.jpg";
-import { Redirect } from "react-router-dom";
+import {withRouter} from 'react-router-dom';
 
 class Register extends React.Component {
   constructor(props) {
@@ -22,17 +22,18 @@ class Register extends React.Component {
     this.setState({[id]:val});
   }
   mysubmit = (event) => {
+    event.preventDefault();
     Axios.post(this.state.url,{
       name : this.state.name,
       email : this.state.email,
       password : this.state.password
     })
     .then(res=>{
-      if(res.data.ok == "true")
+      if(res.data.ok === true)
       {
-        console.log(res.data)
-        alert("Successfully registered")
-        window.location = "http://localhost:3000/"
+        console.log(res.data);
+        alert("Successfully registered");
+        this.props.history.push('/LoginSignup');
       }
       else
       {
@@ -87,4 +88,4 @@ class Register extends React.Component {
   }
 }
 
-export default Register;
+export default withRouter(Register);

@@ -44,7 +44,7 @@ class LoginSignup extends React.Component {
               <Login history={this.props.history} containerRef={ref => (this.current = ref)} />
             )}
             {!isLogginActive && (
-              <Register containerRef={ref => (this.current = ref)} />
+              <Register history={this.props.history} containerRef={ref => (this.current = ref)} />
             )}
           </div>
           <RightSide
