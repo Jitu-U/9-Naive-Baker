@@ -25,7 +25,14 @@ const optionsCuisines = [
     { value: 'Italian', label: 'Italian' },
     { value: 'Indian', label: 'Indian' },
     { value: 'Maxican', label: 'Maxican' },
-    { value: 'Chinese', label: 'Chinese' }
+    { value: 'Chinese', label: 'Chinese' },
+    { value: 'French', label: 'French' },
+    { value: 'Japanese', label: 'Japanese' },
+    { value: 'Greek', label: 'Greek' },
+    { value: 'Spanish', label: 'Spanish' },
+    { value: 'Turkish', label: 'Turkish' },
+    { value: 'Thai', label: 'Thai' },
+    { value: 'Caribbean', label: 'Caribbean' }
 ];
 
 export default function SearchPage() {
@@ -144,7 +151,7 @@ export default function SearchPage() {
             {isError && <div>Something went wrong ...</div>}
             {loading === false &&
                 <>
-                    <Navbar/>
+                    <Navbar />
 
                     <div className="Search-container">
                         <div className="search">
