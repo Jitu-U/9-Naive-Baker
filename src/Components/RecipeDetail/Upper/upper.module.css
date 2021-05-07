@@ -30,7 +30,7 @@
 
 .Display{
     font-style: "SF Pro";
-    font-size: 28px;
+    font-size: 16px;
     color: #104944;
     font-weight: 700;
     margin-left: 5%;
@@ -59,7 +59,7 @@
 
 .TimeCook{
     display: flex;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     margin-left: 5%;
 }
@@ -70,8 +70,8 @@
 .upper_img {
   border-radius: 13px;
 box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.16);
-max-width: 20vw;
-max-height: 20vw;
+/* max-width: 20vw;
+max-height: 20vw; */
 }
 
 .infoSec{

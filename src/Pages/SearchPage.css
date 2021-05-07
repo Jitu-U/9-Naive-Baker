@@ -17,3 +17,40 @@
 .select-category .select-meal{
     outline: none;
 }
+
+.btn-search {
+    display: block;
+	font-size: 21px;
+	padding: 5px 20px;
+    width: 100px;
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+	border: 0;
+	background-color: #037e8c;
+	color: #fff;
+	border-radius: 3px;
+	transition: all 250ms ease-in-out;
+	cursor: pointer;
+}
+
+.btn-search:hover {
+	background-color: #13c0e5;
+}
+
+.btn-search:focus {
+	outline: none;
+}
+
+.prep{
+    text-align: center;
+    font-size: 1.2rem;
+}
+.prep input{
+    padding: 5px;
+}
+
+.result{
+    margin-left: 10rem;
+    margin-top: 2rem;
+}

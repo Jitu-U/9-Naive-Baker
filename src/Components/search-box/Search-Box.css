@@ -8,7 +8,7 @@
   border-width: thick;
   display: inline-flex;
   border: 5px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50px;
+  border-radius: 10px;
 }
 
 .s-input {
@@ -38,18 +38,23 @@
 .Filters{
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 37px;
+  width: 175px;
+  height: 30px;
   margin-right: 1rem;
   border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
-  background:rgba(0, 0, 29, 0.16);
+  border-radius: 5px;
+	background-color: #037e8c;
   box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.16);
-  font-size: 20px;
+  font-size: 22px;
   padding-left: 1vmax;
-  padding-top: 0.3vmax;
+  padding-top: 10px;
+  padding-bottom: 10px;
   cursor: pointer;
-
+  color: white;
+}
+.Filters:hover{
+  background-color: #13c0e5;
+  color: white;
 }
 
 .search-advanced-hidden{

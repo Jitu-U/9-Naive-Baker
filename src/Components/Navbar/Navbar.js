@@ -39,11 +39,11 @@ function Navbar() {
         <div className="Nav-Right-parent">
           <div className="Nav-Right">
             <div className="Filters" onClick={() => history.push("/SearchPage")}>
-              <RiFileSearchLine />Search Page
+              <RiFileSearchLine /> Search Page
             </div>
             {isAuth &&
               <Link className="upload-btn" to='/Upload'>
-                <FcUpload />Upload
+                   &#8593;Upload
               </Link>
             }
             {isAuth === true ?

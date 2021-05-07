@@ -10,7 +10,7 @@
   .photobox{
     margin-left: 50% ;
     margin-top: 2rem;
-    transform: translateX(-75%);
+    transform: translateX(-50%);
   }
   .bio{
     width: 100%;
@@ -25,11 +25,16 @@
   .bionibaju{
     margin-left: 50%;
     font-weight: bold;
-    transform: translateX(-45%);
+    transform: translateX(-55%);
   }
+
+  .content-center-dashboard{
+    text-align: center;
+  }
+
   .bionibaju > h1{
     scale: 1.15;
-    padding-left: 80px;
+    /* padding-left: -20px; */
     /* margin-top: 35px; */
     padding-bottom: 5px;
   }
@@ -49,13 +54,12 @@
     /* background-color: #bdbdbd; */
     padding-top: 5px;
     font-weight: bolder;
-  
     /* background-color: rgb(162, 162, 162); */
     /* height: 75vh; */
     /* width: 25%; */
     margin-top: 20rem;
-    margin-left: 50%;
-    transform: translateX(-70%);
+    /* margin-left: 50%;
+    transform: translateX(-70%); */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -66,10 +70,10 @@
     display: inline-block;
   }
   .main_card{
-    box-shadow: 2px 2px 2rem black;
-    width: 50%;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    /* box-shadow: 2px 2px 2rem black; */
+    /* width: 90%; */
+    /* margin-left: 50%;
+    transform: translateX(-50%); */
     border-radius: 20px;
     background-color:whitesmoke;
   }
