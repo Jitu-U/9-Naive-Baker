@@ -1,13 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Avatar from '../avatar/avatar';
 import Classes from './card.module.css';
 import { FcLikePlaceholder, FcLike } from 'react-icons/fc'
 import { MdPlaylistAdd, MdPlaylistAddCheck, MdShare, MdOpenInNew } from 'react-icons/md'
 import { Redirect, Link, useHistory } from 'react-router-dom';
-
+import { UserContext, UserDispatchContext } from '../../../Contexts/context';
+import axios from 'axios';
 
 export default function Card({ r }) {
     const history = useHistory();
+
+    const { user } = useContext(UserContext);
+    const { setU } = useContext(UserDispatchContext);
+
+    const [isLiked, setIsliked] = useState(false);
+    const [isSaved, setIssaved] = useState(false);
+
+    useEffect(() => {
+        if (JSON.stringify(user) !== '{}') {
+            let l1 = false;
+            for (let i = 0; i < user.user.lik.length; i++) {
+                if (user.user.lik[i] === r._id) {
+                    l1 = true;
+                    break;
+                }
+            }
+            if (l1 === true) {
+                setIsliked(true);
+            }
+            let l2 = false;
+            for (let i = 0; i < user.user.sav.length; i++) {
+                if (user.user.sav[i] === r._id) {
+                    l2 = true;
+                    break;
+                }
+            }
+            if (l2 === true) {
+                setIssaved(true);
+            }
+        }
+    }, []);
 
     const handlecardclick = (event) => {
         event.preventDefault();
@@ -18,6 +50,102 @@ export default function Card({ r }) {
     let vegi = "#03550f"; // Veg or Nonveg tag
     if (!VegStatus) {
         vegi = "#930000";
+    }
+
+    const handlelike = () => {
+        if (JSON.stringify(user) !== '{}') {
+            let exu = user;
+            const body = {
+                _id: r._id
+            };
+            const auth = localStorage.getItem('auth-token');
+            axios
+                .put(`https://naivebakerr.herokuapp.com/recipe/like`, body, {
+                    headers: { 'auth-token': auth }
+                })
+                .then((res) => {
+                    if (res.data.ok === true) {
+                        console.log(res.data.ok);
+                        if (isLiked) {
+                            let idx1 = exu.user.lik.indexOf(r._id);
+                            if (idx1 > -1) {
+                                exu.user.lik.splice(idx1, 1);
+                            }
+                            let idx2 = -1;
+                            for (let j = 0; j < exu.liked.length; j++) {
+                                if (exu.liked[j]._id === r._id) {
+                                    idx2 = j;
+                                    break;
+                                }
+                            }
+                            if (idx2 > -1) {
+                                exu.liked.splice(idx2, 1);
+                            }
+                            setU(exu);
+                            setIsliked(false);
+                        } else {
+                            exu.user.lik.push(r._id);
+                            exu.liked.push(r);
+                            setU(exu);
+                            setIsliked(true);
+                        }
+                    } else {
+                        alert(res.data.err);
+                    }
+                }
+                )
+                .catch(err => alert(err));
+        } else {
+            alert('Please login');
+        }
+    }
+
+    const handlesave = () => {
+        if (JSON.stringify(user) !== '{}') {
+            let exu = user;
+            const body = {
+                _id: r._id
+            };
+            const auth = localStorage.getItem('auth-token');
+            axios
+                .put(`https://naivebakerr.herokuapp.com/recipe/save`, body, {
+                    headers: { 'auth-token': auth }
+                })
+                .then((res) => {
+                    if (res.data.ok === true) {
+                        console.log(res.data.ok);
+                        if (isSaved) {
+                            let idx1 = exu.user.sav.indexOf(r._id);
+                            if (idx1 > -1) {
+                                exu.user.sav.splice(idx1, 1);
+                            }
+                            let idx2 = -1;
+                            for (let j = 0; j < exu.saved.length; j++) {
+                                if (exu.saved[j]._id === r._id) {
+                                    idx2 = j;
+                                    break;
+                                }
+                            }
+                            if (idx2 > -1) {
+                                exu.saved.splice(idx2, 1);
+                            }
+                            setU(exu);
+                            setIssaved(false);
+                        } else {
+                            exu.user.sav.push(r._id);
+                            exu.saved.push(r);
+                            setU(exu);
+                            setIssaved(true);
+                        }
+                    } else {
+                        alert(res.data.err);
+                    }
+                }
+                )
+                .catch(err => alert(err));
+        } else {
+            alert('Please login');
+        }
     }
 
     return (
@@ -45,19 +173,23 @@ export default function Card({ r }) {
                     <img src={r.picURL}></img>
                     <div lassName={Classes.infoBox}>
                         <div style={{ display: "inline-block" }}>
-                            <Avatar r={r}/>
+                            <Avatar r={r} />
                             <p className={Classes.Tag}>{r.mealType}</p>
-                            <br/>
+                            <br />
                             <p className={Classes.Tag}>{r.cuisine}</p>
-                            <br/>
+                            <br />
                             <p className={Classes.Tag}>{r.ingredients[0].ingname}</p>
                         </div>
                         <div className={Classes.actions}>
-                            <div className={Classes.Button}>
-                                <FcLikePlaceholder size={30} />
+                            <div className={Classes.Button} onClick={handlelike}>
+                                {
+                                    isLiked ? <FcLike size={30} /> : <FcLikePlaceholder size={25} />
+                                }
                             </div>
-                            <div className={Classes.Button}>
-                                <MdPlaylistAdd size={30} />
+                            <div className={Classes.Button} onClick={handlesave}>
+                                {
+                                    isSaved ? <MdPlaylistAddCheck size={30} /> : <MdPlaylistAdd size={25} />
+                                }
                             </div>
                             <div className={Classes.Button} onClick={handlecardclick} >
                                 <MdOpenInNew size={30} />

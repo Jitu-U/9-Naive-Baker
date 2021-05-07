@@ -20,6 +20,11 @@ export default function DashboardProfile({ user }) {
             </span>
           </div>
         </div>
+        </div>
+
+
+
+        <div className="content-center-dashboard">
         <div className="biobottom">
           <div>
             <h1>Uploaded Recipes</h1>
@@ -44,7 +49,8 @@ export default function DashboardProfile({ user }) {
           </div>
         </div>
        </div>
-      </div>
+       </div>
+      // </div>
   );
 }
 

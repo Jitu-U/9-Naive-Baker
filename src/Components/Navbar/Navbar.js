@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { useHistory, Link } from "react-router-dom"
 import "./Navbar.css"
-import SearchBox from "../search-box/Search-Box";
 import { FcUpload } from "react-icons/fc"
 import { RiFileSearchLine } from 'react-icons/ri'
 import { AuthContext, UserContext } from '../../Contexts/context';
@@ -40,11 +39,11 @@ function Navbar() {
         <div className="Nav-Right-parent">
           <div className="Nav-Right">
             <div className="Filters" onClick={() => history.push("/SearchPage")}>
-              <RiFileSearchLine />Search Page
+              <RiFileSearchLine /> Search Page
             </div>
             {isAuth &&
               <Link className="upload-btn" to='/Upload'>
-                <FcUpload />Upload
+                   &#8593;Upload
               </Link>
             }
             {isAuth === true ?
