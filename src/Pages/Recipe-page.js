@@ -142,6 +142,7 @@ export default function RecipePage() {
 
   return (
     <>
+    <div className="background" style={{height:"120%"}}>
       <Navbar />
       <div className="container">
         <RecipeDetail Rec={Rec} />
@@ -164,6 +165,7 @@ export default function RecipePage() {
             <input type="text" placeholder="Share your views for this recipe" className="review-input"></input>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

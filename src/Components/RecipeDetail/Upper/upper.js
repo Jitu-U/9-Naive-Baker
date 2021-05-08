@@ -37,8 +37,8 @@ function Upper({ Rec }) {
       </div>
 
       <div className={Classes.Middle}>
-          <p> {Rec.mealType} </p>
-          <p> {Rec.cuisine} </p>
+          <p className={Classes.tag}> {Rec.mealType} </p>
+          <p className={Classes.tag}> {Rec.cuisine} </p>
           <p> By ~ {Rec.chefname} </p>
       </div>
 

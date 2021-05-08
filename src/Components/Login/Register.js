@@ -62,11 +62,11 @@ class Register extends React.Component {
             </div> */}
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input type="text" name="email" onChange={this.handle} placeholder="email" />
+              <input type="text" name="email" onChange={this.handle} placeholder="enter your email" />
             </div>
             <div className="form-group">
               <label htmlFor="password">Password</label>
-              <input type="text" name="password" onChange={this.handle}  placeholder="password" />
+              <input type="password" name="password" onChange={this.handle}  placeholder="password" />
             </div>
               {/* <label htmlFor="foodChoice1" class="checkbox_label">   
               <input type="checkbox" name="foodChoice1" class="checkbox_label" value="Vegan" /> Are you a Vegan ?
