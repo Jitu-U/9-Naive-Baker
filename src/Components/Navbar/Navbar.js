@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useHistory, Link } from "react-router-dom"
+import { useHistory, Link, useLocation } from "react-router-dom"
 import "./Navbar.css"
 import { RiFileSearchLine } from 'react-icons/ri'
 import { AuthContext, UserContext } from '../../Contexts/context';
@@ -7,6 +7,7 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import {IoLogOutOutline,IoInformationCircleOutline,IoLockClosedOutline} from "react-icons/io5"
 import {CgProfile} from "react-icons/cg"
+
 
 function Navbar() {
 
@@ -39,11 +40,13 @@ function Navbar() {
     return (
       <>
       <div className="Profile-Button"  onClick={handleClick}>
+
         <div className="Name">
           {user.user.name}
         </div>
         <img className="Profile-Pic" src="https://lh3.googleusercontent.com/ogw/ADGmqu_zu--WffN4JlWGzZ0pulY4v67ZMm7FTfhJIYJhiTA=s64-c-mo"></img>
       </div>
+
       <Menu
         style={{"border-radius":"13"}}
         id="simple-menu"
@@ -58,6 +61,7 @@ function Navbar() {
         <MenuItem onClick={()=> { history.push("/Dashboard")}} className="Menu-item" style={{"background-color":"red" ,"color":"white"}}>Logout <IoLogOutOutline size={20}/></MenuItem>
       </Menu>
         </>
+
     );
   }
 

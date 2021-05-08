@@ -145,10 +145,8 @@ SearchBox{
       color: white;
 }
 
-
 .Menu-item{
   margin: 5px;
   padding-top: 1%;
   cursor: pointer;
   border-radius: 8px;
-}
