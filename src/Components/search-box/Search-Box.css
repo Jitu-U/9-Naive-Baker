@@ -11,6 +11,7 @@
   border-radius: 10px;
   margin-left: 25%;
   margin-bottom: 3%;
+  z-index: 999;
 }
 
 .s-input {
