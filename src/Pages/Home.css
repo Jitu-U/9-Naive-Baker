@@ -27,6 +27,8 @@
   grid-gap: 5px;
   margin-bottom: 5vw;
   z-index: 0;
+  padding-bottom: 3%;
+  padding-top: 3%;
  
 }
 .Grid-Row {

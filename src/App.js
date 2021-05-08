@@ -12,6 +12,9 @@ import UploadRecipe from './Pages/UploadRecipe';
 import ForgetPassword from './Pages/ForgetPassword';
 import SearchPage from './Pages/SearchPage';
 import { AuthDispatchContext, UserDispatchContext, RecipeDispatchContext } from './Contexts/context';
+import About from './Pages/About';
+import Privacy from './Pages/Privacy';
+import Guide from './Pages/Guide';
 
 function App() {
 
@@ -98,6 +101,15 @@ function App() {
           </Route>
           <Route path="/ForgetPassword">
             <ForgetPassword />
+          </Route>
+          <Route path="/About">
+            <About />
+          </Route>
+          <Route path="/PrivacyPolicy">
+            <Privacy/>
+          </Route>
+          <Route path="/Guide">
+            <Guide/>
           </Route>
         </Switch>
       </BrowserRouter>

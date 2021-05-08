@@ -205,7 +205,7 @@ export default function SearchPage() {
                             <br></br>                            
                             <div class="btn-search" onClick={handleButtonclick}>
                                 
-                                Submit
+                                Search
                                 
                             </div>
                         </div>

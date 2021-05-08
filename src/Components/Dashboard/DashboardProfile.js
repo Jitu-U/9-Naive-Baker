@@ -9,16 +9,16 @@ export default function DashboardProfile({ user }) {
         <div className="bio">
           <div className="bionibaju">
             <div className="photobox">
-              <img src="https://seventhqueen.com/themes/kleo/wp-content/uploads/rtMedia/users/44269/2020/07/dummy-profile.png"></img>
+              <img style={{"border-radius":"100px"}}src="https://www.flaticon.com/svg/vstatic/svg/1830/1830767.svg?token=exp=1620451018~hmac=51eabaa39f213e5882f6e3a454005096"></img>
             </div>
+            <div className="NameCard">
             <h1>{user.user.name}</h1>
             <span className="bioicon">
-              <Button variant="outlined" color='primary'>{user.user.following.length} following</Button>
+             I am cooking enthusiast
             </span>
-            <span className="bioicon">
-              <Button variant="contained" color='primary'>{user.user.followers.length} followers</Button>
-            </span>
-          </div>
+
+            </div>
+            </div>
         </div>
       </div>
 
@@ -27,20 +27,21 @@ export default function DashboardProfile({ user }) {
       <div className="content-center-dashboard">
         <div className="biobottom">
           <div>
-            <h1>Uploaded Recipes</h1>
+            <h1 className="dmenu">Uploaded Recipes</h1>
             {user.uploaded.length !== 0
               &&
               user.uploaded.map(r => <RecipeCard r={r} />)
             }
           </div>
           <div>
-            <h1>Liked Recipes</h1>
+            <h1 className="dmenu">Liked Recipes</h1>
             {user.liked.length !== 0 && user.liked[0] !== null &&
               user.liked.map(r => <RecipeCard r={r} />)
             }
           </div>
           <div>
-            <h1>Saved Recipes</h1>
+            <h1 className="dmenu">Saved Recipes</h1>
+
             {user.saved.length !== 0 && user.saved[0] !== null
               &&
               user.saved.map(r => <RecipeCard r={r} />)
