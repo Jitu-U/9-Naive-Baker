@@ -16,6 +16,7 @@ export default function DashboardProfile({ user }) {
             <span className="bioicon">
              I am cooking enthusiast
             </span>
+
             </div>
             </div>
         </div>
@@ -40,6 +41,7 @@ export default function DashboardProfile({ user }) {
           </div>
           <div>
             <h1 className="dmenu">Saved Recipes</h1>
+
             {user.saved.length !== 0 && user.saved[0] !== null
               &&
               user.saved.map(r => <RecipeCard r={r} />)
