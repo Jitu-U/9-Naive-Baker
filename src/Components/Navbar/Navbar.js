@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
-import { useHistory, Link, useLocation } from "react-router-dom"
+import { useHistory, Link } from "react-router-dom"
 import "./Navbar.css"
 import { RiFileSearchLine } from 'react-icons/ri'
 import { AuthContext, UserContext } from '../../Contexts/context';
-
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import {IoLogOutOutline,IoInformationCircleOutline,IoLockClosedOutline} from "react-icons/io5"
+import {CgProfile} from "react-icons/cg"
 
 function Navbar() {
 
@@ -22,38 +25,46 @@ function Navbar() {
       </div>
     );
   }
+  const Profile = () => {
+    const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const ProfileMenu = () => {
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
 
-    let menu = false;
-    const menuAction = () =>{
-            menu = true;
-    }
-
-        
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
     return (
-      <div className="drop" >
-      <div className="Profile-Button">
+      <>
+      <div className="Profile-Button"  onClick={handleClick}>
         <div className="Name">
           {user.user.name}
         </div>
         <img className="Profile-Pic" src="https://lh3.googleusercontent.com/ogw/ADGmqu_zu--WffN4JlWGzZ0pulY4v67ZMm7FTfhJIYJhiTA=s64-c-mo"></img>
       </div>
-        <div className="menu">
-          <div className="Menu-item" onClick={() => history.push("/Dashboard")}> Dashboard</div>
-          <div className="Menu-item">  userGuide</div>
-          <div className="Menu-item" id="logout"> Log out</div>
-        </div>
-        </div>
+      <Menu
+        style={{"border-radius":"13"}}
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        <MenuItem onClick={()=> { history.push("/Dashboard")}} className="Menu-item"><CgProfile size={21}/>Dashboard</MenuItem>
+        <MenuItem onClick={()=> { history.push("/PrivacyPolicy")}} className="Menu-item"><IoLockClosedOutline size={21}/>Privacy Policy</MenuItem>
+        <MenuItem onClick={()=> { history.push("/About")}} className="Menu-item"><IoInformationCircleOutline size={21}/>About us</MenuItem>
+        <MenuItem onClick={()=> { history.push("/Dashboard")}} className="Menu-item" style={{"background-color":"red" ,"color":"white"}}>Logout <IoLogOutOutline size={20}/></MenuItem>
+      </Menu>
+        </>
     );
   }
 
   return (
     <nav className='Navbar'>
       <div className='navbar-container'>
-        <Link to='/' className='navbar-logo'>Naive Baker</Link>
-
+        <Link to='/' className='navbar-logo'> Naive Baker</Link>
         <div className="Nav-Right-parent">
           <div className="Nav-Right">
             <div className="Filters" onClick={() => history.push("/SearchPage")}>
@@ -65,7 +76,7 @@ function Navbar() {
               </Link>
             }
             {isAuth === true ?
-              <ProfileMenu /> :
+              <Profile/> :
               <JoinNow />
             }
           </div>

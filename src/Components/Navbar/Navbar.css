@@ -45,14 +45,13 @@
   /* position: absolute; */
   /* left: 5rem; */
   margin-left: 100%;
-  margin-top:  40%;
+  margin-top:  10%;
   display: inline-flex;
   justify-content: flex-end;
 }
 
 
 .join-btn {
-  float: right;
   display: inline-block;
   width: 100px;
   height:30px;
@@ -146,38 +145,10 @@ SearchBox{
       color: white;
 }
 
-.drop{
- display: inline-block;
-}
-
-.menu{
-  background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.10);
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
-  border-radius: 8px;
-  padding: 10px;
-  display: block;
-  right: 5vw;
-  top: 70px;
-  margin-top: 10px;
-}
-
-.menu-hidden{
-  display: none;
-}
 
 .Menu-item{
-  display: inherit;
   margin: 5px;
-  background-color: white;
-  height: 29px;
-  border-radius: 13px;
-  text-align: center;
   padding-top: 1%;
   cursor: pointer;
-}
-
-#logout {
-  background-color: red;
-  color: white;
+  border-radius: 8px;
 }
