@@ -11,6 +11,10 @@
 	font-family: "Open Sans", sans-serif;
 }
 
+.header{
+	font-weight: bolder;
+}
+
 .base-container .content {
 	display: flex;
 	flex-direction: column;

@@ -1,11 +1,12 @@
 import React from 'react';
 import "./SearchPage.css";
 import { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom'
 import Select from 'react-select';
 import axios from 'axios';
 import { Button } from '@material-ui/core';
 import RecipeCard from '../Components/RecipeCard/RecipeCard';
-import Navbar from '../Components/Navbar/Navbar';
+import {IoArrowBack} from 'react-icons/io5'
 
 const optionsCategorys = [
     { value: 'Veg', label: 'Veg' },
@@ -147,11 +148,12 @@ export default function SearchPage() {
 
     return (
         <>
+             <div className="background" style={{height:"5000px"}}>
             {console.log("spp")}
             {isError && <div>Something went wrong ...</div>}
             {loading === false &&
                 <>
-                    <Navbar />
+                <Link to='/' className='navbar-logo' style={{marginLeft:"45vw"}}> Naive Baker <IoArrowBack size={30} style={{marginLeft:"30px"}}/></Link>
 
                     <div className="Search-container">
                         <div className="search">
@@ -197,7 +199,7 @@ export default function SearchPage() {
                                                         <br></br>
                             <div class="prep">
                             <label>
-                                Preparation Time &nbsp; &nbsp; &nbsp;
+                                Preparation Time (in Minutes) &nbsp; &nbsp; &nbsp;
                              <input type="number" value={preparationTime} onChange={changepreparationTime} />
 
                             </label>
@@ -221,6 +223,7 @@ export default function SearchPage() {
                         </div>
                 </>
             }
+            </div>
         </>
     )
 }

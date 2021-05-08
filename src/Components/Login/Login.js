@@ -60,11 +60,12 @@ function Login(props) {
         <div className="form">
           <div className="form-group">
             <label htmlFor="email">email</label>
-            <input type="text" name="email" onChange={handleemail} placeholder="email" />
+            <input type="text" name="email" onChange={handleemail} placeholder="example@example.com" />
           </div>
           <div className="form-group">
             <label htmlFor="password">Password</label>
-            <input type="password" name="password" onChange={handlepassword} placeholder="password" />
+            <p style={{fontSize:"13px"}}>password must be atleast 8 characters long</p>
+            <input type="password" name="password" onChange={handlepassword} placeholder="Password *" />
           </div>
           <Link className="forget" to="/ForgetPassword">forget password?</Link>
         </div>

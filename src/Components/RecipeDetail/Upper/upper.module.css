@@ -1,16 +1,23 @@
 .Left{
-    margin-top: 5px;
+    margin-top: 15px;
     width: 20%;
     height: 180px;
     padding: 10px;
     border-radius: 8px;
-    background: rgba(255, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid #7070702a;
 }
 
 .Middle{
+    margin-top:15px;
     width: 20%;
+    height: 180px;
     margin-left: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #7070702a;
+    text-align: center;
 }
 
 .PhotoContainer{
@@ -30,7 +37,7 @@
 
 .Display{
     font-style: "SF Pro";
-    font-size: 16px;
+    font-size: 21px;
     color: #104944;
     font-weight: 700;
     margin-left: 5%;

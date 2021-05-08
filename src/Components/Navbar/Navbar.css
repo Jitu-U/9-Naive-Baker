@@ -1,6 +1,6 @@
 /*Navigation Bar for Home page - Jitesh & Meet*/
 .Navbar {
-  background-color: rgba(255, 255, 255, 255);
+  background-color: none;
   height: 150px;
   display: flex;
   justify-content: flex-start;
@@ -53,19 +53,21 @@
 
 .join-btn {
   display: inline-block;
-  width: 100px;
+  width: 120px;
   height:30px;
   border-radius: 8px;
   margin-top: auto;
-  background: rgb(38, 0, 255);
-  padding-top: 10px;
-  padding-bottom: 10px;
+  background: rgb(255, 95, 103);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 4px;
+  border: 2px solid rgb(255, 95, 103);
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
   align-content: center;
   text-align: center;
-  font-family: Poppins;
-  font-weight: bold;
-  font-size: 17px;
+  font-family: SF Pro, Poppins;
+  font-weight: bolder;
+  font-size: 20px;
   color: rgb(230, 230, 230);
 	transition: box-shadow 100ms ease-out;
   cursor: pointer;
@@ -76,9 +78,10 @@ Link{
 }
 
 .join-btn:hover {
-  border: thin;
-	border-color: #EF0003;
-	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.13);
+  border: 2px solid rgb(255, 95, 103);
+	box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.13);
+  background-color: white;
+  color: black;
   z-index: 99;
 }
 
@@ -95,9 +98,10 @@ SearchBox{
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.16);
   border-radius: 8px;
   display: inline-flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   padding: 0px 5px;
   font-size: 13px;
+  cursor: pointer;
   margin-left: 10px;
 }
 

@@ -3,6 +3,8 @@ import "./LoginSignup.css";
 import Login from "../Components/Login/Login"
 import Register from "../Components/Login/Register"
 import loginImg from "../Components/Login/login.jpg";
+import {Link} from 'react-router-dom';
+import {IoArrowBack} from 'react-icons/io5'
 
 class LoginSignup extends React.Component {
   constructor(props) {
@@ -35,7 +37,9 @@ class LoginSignup extends React.Component {
     const currentActive = isLogginActive ? "login" : "register";
     return (
       <div className="App">
+       
         <div>
+        <Link to='/' className='navbar-logo' ><IoArrowBack size={30} style={{marginLeft:"30px"}}/> Naive Baker </Link>
               <img src={loginImg} class="login_img"/>
         </div>
         <div className="login">

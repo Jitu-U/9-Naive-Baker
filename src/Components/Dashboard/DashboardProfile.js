@@ -9,7 +9,7 @@ export default function DashboardProfile({ user }) {
         <div className="bio">
           <div className="bionibaju">
             <div className="photobox">
-              <img style={{"border-radius":"100px"}}src="https://www.flaticon.com/svg/vstatic/svg/1830/1830767.svg?token=exp=1620451018~hmac=51eabaa39f213e5882f6e3a454005096"></img>
+              <img style={{"border-radius":"100px"}}src="https://lh3.googleusercontent.com/ogw/ADGmqu_zu--WffN4JlWGzZ0pulY4v67ZMm7FTfhJIYJhiTA=s64-c-mo"></img>
             </div>
             <div className="NameCard">
             <h1>{user.user.name}</h1>

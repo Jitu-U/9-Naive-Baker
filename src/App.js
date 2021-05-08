@@ -15,6 +15,11 @@ import { AuthDispatchContext, UserDispatchContext, RecipeDispatchContext } from 
 import About from './Pages/About';
 import Privacy from './Pages/Privacy';
 import Guide from './Pages/Guide';
+import ReactGA from 'react-ga';
+import RouteChangeTracker from "./Components/Ga/RouteChangeTracker"
+
+const TRACKING_ID = "UA-12341234-1"; // YOUR_OWN_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
 
@@ -112,8 +117,9 @@ function App() {
             <Guide/>
           </Route>
         </Switch>
+        <RouteChangeTracker/>
       </BrowserRouter>
-
+     
     </>
   );
 }

@@ -6,7 +6,9 @@ import { AuthContext, UserContext, AuthDispatchContext, UserDispatchContext } fr
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { IoLogOutOutline, IoInformationCircleOutline, IoLockClosedOutline } from "react-icons/io5"
+import {IoIosLogIn} from "react-icons/io"
 import { CgProfile } from "react-icons/cg"
+import {TiDocumentText} from "react-icons/ti"
 
 
 function Navbar() {
@@ -32,7 +34,7 @@ function Navbar() {
   const JoinNow = () => {
     return (
       <div className="join-btn" onClick={signUp}>
-        Join now
+         <IoIosLogIn size={21} /> Join Now
       </div>
     );
   }
@@ -68,6 +70,7 @@ function Navbar() {
           <MenuItem onClick={() => { history.push("/Dashboard") }} className="Menu-item"><CgProfile size={21} />Dashboard</MenuItem>
           <MenuItem onClick={() => { history.push("/PrivacyPolicy") }} className="Menu-item"><IoLockClosedOutline size={21} />Privacy Policy</MenuItem>
           <MenuItem onClick={() => { history.push("/About") }} className="Menu-item"><IoInformationCircleOutline size={21} />About us</MenuItem>
+          <MenuItem onClick={() => { history.push("/Guide") }} className="Menu-item"><TiDocumentText size={21} />User Guide</MenuItem>
           <MenuItem onClick={handlelogout} className="Menu-item" style={{ "background-color": "red", "color": "white" }}>Logout <IoLogOutOutline size={20} /></MenuItem>
         </Menu>
       </>
