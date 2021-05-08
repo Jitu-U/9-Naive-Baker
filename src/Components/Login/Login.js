@@ -1,7 +1,7 @@
 import React, { useState, useContext, useHistory } from "react";
 import Axios from "axios";
 import "./Login.css";
-import {withRouter} from 'react-router-dom';
+import {withRouter,Link} from 'react-router-dom';
 import { AuthDispatchContext, UserDispatchContext } from '../../Contexts/context';
 
 function Login(props) {
@@ -66,6 +66,7 @@ function Login(props) {
             <label htmlFor="password">Password</label>
             <input type="password" name="password" onChange={handlepassword} placeholder="password" />
           </div>
+          <Link className="forget" to="/ForgetPassword">forget password?</Link>
         </div>
       </div>
       <div className="footer">

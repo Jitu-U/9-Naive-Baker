@@ -76,10 +76,6 @@ img{
     /* color: blue; */
 }
 
-p{
-    /* padding-left: 1vw; */
-}
-
 .pict{
     display: inline-flex;
 }
@@ -90,4 +86,7 @@ p{
 }
 .info{
     position: fixed;
+}
+.photobox{
+    margin-left: 900px;
 }

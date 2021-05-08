@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { useHistory, Link } from "react-router-dom"
+import { useHistory, Link, useLocation } from "react-router-dom"
 import "./Navbar.css"
-import { FcUpload } from "react-icons/fc"
 import { RiFileSearchLine } from 'react-icons/ri'
 import { AuthContext, UserContext } from '../../Contexts/context';
+
 
 function Navbar() {
 
@@ -11,23 +11,41 @@ function Navbar() {
   const { user } = useContext(UserContext);
 
   const history = useHistory();
+  let signUp = () =>{
+    history.push("/LoginSignup")
+  }
 
   const JoinNow = () => {
     return (
-      <div className="join-btn">
-        <Link to="/LoginSignup">Join now</Link>
+      <div className="join-btn" onClick={signUp}>
+        Join now
       </div>
     );
   }
 
   const ProfileMenu = () => {
+
+    let menu = false;
+    const menuAction = () =>{
+            menu = true;
+    }
+
+        
+
     return (
-      <div className="Profile-Button" onClick={() => history.push("/Dashboard")}>
+      <div className="drop" >
+      <div className="Profile-Button">
         <div className="Name">
           {user.user.name}
         </div>
         <img className="Profile-Pic" src="https://lh3.googleusercontent.com/ogw/ADGmqu_zu--WffN4JlWGzZ0pulY4v67ZMm7FTfhJIYJhiTA=s64-c-mo"></img>
       </div>
+        <div className="menu">
+          <div className="Menu-item" onClick={() => history.push("/Dashboard")}> Dashboard</div>
+          <div className="Menu-item">  userGuide</div>
+          <div className="Menu-item" id="logout"> Log out</div>
+        </div>
+        </div>
     );
   }
 
