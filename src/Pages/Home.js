@@ -42,6 +42,7 @@ export default function Home() {
           <span className="f-item" onClick={()=> history.push("/Guide")}> User Guide</span><VscCircleFilled/>
           <span className="f-item" onClick={()=> history.push("/About")}> About us</span><VscCircleFilled/>
           <span className="f-item" onClick={()=> history.push("/PrivacyPolicy")}>Privacy Policy</span>
+
           <hr style={{"width":"50%"}}/>
         </div>
         <div style={{"font-weight":"bolder", fontFamily:"Noteworthy", fontSize :"40px"}}> Naive Baker <FaTrademark size={10} style={{marginBottom:"15px"}}/></div>
